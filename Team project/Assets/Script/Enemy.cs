@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
 
     private void Dil()
     {
+        pirnt("적 사망");
         gameObject.SetActive(false);
     }
 
