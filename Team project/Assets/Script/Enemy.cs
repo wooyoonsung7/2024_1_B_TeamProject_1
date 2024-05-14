@@ -3,34 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-// using DG.Tweening;         //DoTweenÀ» »ç¿ëÇÏ±â À§ÇØ DoTweening ¼³Ä¡ÈÄ ÁøÇà
+// using DG.Tweening;         //DoTweenì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ DoTweening ì„¤ì¹˜í›„ ì§„í–‰
 
 
 public class Enemy : MonoBehaviour
 {
     public int EnemyHp = 10;
-    public float Enemyspeed = 0.5f;
-
-
     //DoTween
 
-   // Tween tween;                    //Æ®À­ ¼±¾ğ
-   // Sequence Sequence;              // ½ÃÄı½º ¼±¾ğ
-
-
-
+   // Tween tween;                    //íŠ¸ìœ— ì„ ì–¸
+   // Sequence Sequence;              // ì‹œí€¸ìŠ¤ ì„ ì–¸
 
 
     void Start()
     {
-        // transform.DOMoveX(5, 0.5f); // ÀûÀÌ 1¹ø Æ÷ÀÎÆ®·Î 5ÃÊ µ¿¾È °£´Ù.
+        // transform.DOMoveX(5, 0.5f); // ì ì´ 1ë²ˆ í¬ì¸íŠ¸ë¡œ 5ì´ˆ ë™ì•ˆ ê°„ë‹¤.
     }
 
 
     void Update()
     {
-        //Sequence.Kill();    //ÇØ´ç ½ÃÄö½º¸¦ Á¾·áÇÑ´Ù.
-        //Tween.kill();     //ÇØ´ç Æ®À©À» Á¾·áÇÑ´Ù.
+        //Sequence.Kill();    //í•´ë‹¹ ì‹œí€€ìŠ¤ë¥¼ ì¢…ë£Œí•œë‹¤.
+        //Tween.kill();     //í•´ë‹¹ íŠ¸ìœˆì„ ì¢…ë£Œí•œë‹¤.
     }
 
     private void Dil()
@@ -40,33 +34,33 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Point1")   // ¸¸¾à 1¹ø Æ÷ÀÎÆ®¿¡ Ãæµ¹ÇÏ¸é
+        if (collision.gameObject.tag == "Point1")   // ë§Œì•½ 1ë²ˆ í¬ì¸íŠ¸ì— ì¶©ëŒí•˜ë©´
         {
-            // transform.DORotate(new Vector3(0, 0, 90), 0.3f); // 90µµ È¸ÀüÇÏ°í
-            // transform.DOMoveX(3, 0.5f);  //5ÃÊ µ¿¾È 2¹ø Æ÷ÀÎÆ®·Î ÀÌµ¿ÇØ¶ó 
+            // transform.DORotate(new Vector3(0, 0, 90), 0.3f); // 90ë„ íšŒì „í•˜ê³ 
+            // transform.DOMoveX(3, 0.5f);  //5ì´ˆ ë™ì•ˆ 2ë²ˆ í¬ì¸íŠ¸ë¡œ ì´ë™í•´ë¼ 
         }
 
-        if(collision.gameObject.tag == "Point2")    // ¸¸¾à 2¹ø Æ÷ÀÎÆ®¿¡ Ãæµ¹ÇÏ¸é
+        if(collision.gameObject.tag == "Point2")    // ë§Œì•½ 2ë²ˆ í¬ì¸íŠ¸ì— ì¶©ëŒí•˜ë©´
         {
-            // transform.DORotate(new Vector3(0, 0, 90), 0.3f); // 90µµ È¸ÀüÇÏ°í
-            // transform.DOMoveX(3, 0.5f);  //5ÃÊ µ¿¾È 3¹ø Æ÷ÀÎÆ®·Î ÀÌµ¿ÇØ¶ó 
+            // transform.DORotate(new Vector3(0, 0, 90), 0.3f); // 90ë„ íšŒì „í•˜ê³ 
+            // transform.DOMoveX(3, 0.5f);  //5ì´ˆ ë™ì•ˆ 3ë²ˆ í¬ì¸íŠ¸ë¡œ ì´ë™í•´ë¼ 
         }
 
-        if (collision.gameObject.tag == "Point3")   // ¸¸¾à 3¹ø Æ÷ÀÎÆ®¿¡ Ãæµ¹ÇÏ¸é
+        if (collision.gameObject.tag == "Point3")   // ë§Œì•½ 3ë²ˆ í¬ì¸íŠ¸ì— ì¶©ëŒí•˜ë©´
         {
-            // transform.DORotate(new Vector3(0, 0, 90), 0.3f); // 90µµ È¸ÀüÇÏ°í
-            // transform.DOMoveX(3, 0.5f);  //5ÃÊ µ¿¾È 4¹ø Æ÷ÀÎÆ®·Î ÀÌµ¿ÇØ¶ó 
+            // transform.DORotate(new Vector3(0, 0, 90), 0.3f); // 90ë„ íšŒì „í•˜ê³ 
+            // transform.DOMoveX(3, 0.5f);  //5ì´ˆ ë™ì•ˆ 4ë²ˆ í¬ì¸íŠ¸ë¡œ ì´ë™í•´ë¼ 
         }
 
-        if (collision.gameObject.tag == "Point4")   // ¸¸¾à 4¹ø Æ÷ÀÎÆ®¿¡ Ãæµ¹ÇÏ¸é
+        if (collision.gameObject.tag == "Point4")   // ë§Œì•½ 4ë²ˆ í¬ì¸íŠ¸ì— ì¶©ëŒí•˜ë©´
         {
-            // transform.DORotate(new Vector3(0, 0, 90), 0.3f); // 90µµ È¸ÀüÇÏ°í
-            // transform.DOMoveX(3, 0.5f);  //5ÃÊ µ¿¾È 5¹ø Æ÷ÀÎÆ®·Î ÀÌµ¿ÇØ¶ó 
+            // transform.DORotate(new Vector3(0, 0, 90), 0.3f); // 90ë„ íšŒì „í•˜ê³ 
+            // transform.DOMoveX(3, 0.5f);  //5ì´ˆ ë™ì•ˆ 5ë²ˆ í¬ì¸íŠ¸ë¡œ ì´ë™í•´ë¼ 
         }
 
-        if (collision.gameObject.tag == "FinshPoint")   // ¸¸¾à 5¹ø Æ÷ÀÎÆ®¿¡ µµÂøÇÏ¸é
+        if (collision.gameObject.tag == "FinshPoint")   // ë§Œì•½ 5ë²ˆ í¬ì¸íŠ¸ì— ë„ì°©í•˜ë©´
         {
-            Destroy(gameObject);        // ÀûÀ» ¾ø¿¡¶ó
+            Destroy(gameObject);        // ì ì„ ì—†ì—ë¼
         }
     }
 }
