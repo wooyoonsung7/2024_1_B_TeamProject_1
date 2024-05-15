@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using DG.Tweening;         //DoTween을 사용하기 위해 DoTweening 설치후 진행
+using DG.Tweening;         
 
 
 public class EnemyMove : MonoBehaviour
