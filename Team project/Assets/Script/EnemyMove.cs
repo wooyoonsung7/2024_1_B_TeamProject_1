@@ -14,7 +14,7 @@ public class EnemyMove : MonoBehaviour
 
     void Start()
     {
-        print("본 Project는 A Team Game Project를 위한 프로토 타입 으로 Enemy는 Point 2에서 사망하게 코딩 했습니다. 작성자 : 정윤호 ");
+        print("본 Project는 A Team Game Project를 위한 프로토 타입 으로 Enemy는 Point 2에서 사망하게 코딩 했습니다.");
         transform.DOMoveX(4, 6f); // 적이 1번 포인트로 6초 동안 간다.
     }
 
