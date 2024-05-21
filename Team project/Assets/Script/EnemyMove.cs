@@ -11,7 +11,12 @@ public class EnemyMove : MonoBehaviour
     public float EnemyHp = 10f;
     // DoTween
     Tween tween;                    //트윗 선언
+    public Transform point1;   //이것을 지정해서 이 위치로 이동시킬 예정
+    public Transform point2;
+    public Transform point3;
+    public Transform point4;
 
+    
     void Start()
     {
         print("본 Project는 A Team Game Project를 위한 프로토 타입 으로 Enemy는 Point 2에서 사망하게 코딩 했습니다.");
@@ -20,10 +25,7 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        if (EnemyHp <= 0)
-        {
-            Die();
-        }
+        if (EnemyHp <= 0) Die();
     }
     void Die()
     {
