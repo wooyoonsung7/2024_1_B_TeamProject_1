@@ -4,51 +4,30 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
+    public GameObject[] cardlist =  new GameObject[4];
     public bool isDrag;
-    public bool isUsed;
-    Rigidbody2D rigidbody2D;
 
-    void Awake()
+
+    private RectTransform rectTransform; // RectTransform으로 일반 Transform 대체
+
+    private void Start()
     {
-      isUsed = false;
+        
+        rectTransform = GetComponent<RectTransform>();
 
-      rigidbody2D = GetComponent<Rigidbody2D>();
-      rigidbody2D.simulated = false;
-    }
-
-
-    void Start()
-    {
-            
-    }
-
-   
-    void Update()
-    {
-        if (isUsed) return;
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        if (Input.GetMouseButtonDown(0)) Drag();
-        if (Input.GetMouseButtonUp(0)) Drop();
-    }
-
-    void Drag()
-    {
-        isDrag = true;
-        rigidbody2D.simulated = false;
-    }
-
-    void Drop()
-    {
         isDrag = false;
-        isUsed = true;
-        rigidbody2D.simulated = true;
     }
 
-    public void Used()
+    private void Update()
     {
-        isDrag = false;                             
-        isUsed = true;                         
-        rigidbody2D.simulated = true;               
+        // isDrag가 true 가 되는 조건 추후 작성 
+
+        if (isDrag == true)
+        {
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
+            {
+                rectTransform.position = Input.mousePosition; //rectTransform.position를 마우스 를 따라 다니게 하라  // mousePosition 클릭 좌표
+            }
+        }     
     }
 }
