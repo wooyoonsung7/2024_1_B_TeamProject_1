@@ -405,11 +405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90081d106cc2dbd4bbced36fff8d25a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardlist:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &273959201
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +765,7 @@ GameObject:
   - component: {fileID: 894624984}
   - component: {fileID: 894624983}
   - component: {fileID: 894624982}
+  - component: {fileID: 894624985}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -851,6 +847,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &894624985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894624981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &931672277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,11 +1025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90081d106cc2dbd4bbced36fff8d25a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardlist:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &933629678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,11 +1565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90081d106cc2dbd4bbced36fff8d25a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardlist:
-  - {fileID: 1279491433}
-  - {fileID: 931672277}
-  - {fileID: 163977066}
-  - {fileID: 1972092828}
 --- !u!1 &1282130124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,11 +1956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90081d106cc2dbd4bbced36fff8d25a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardlist:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &2033852592
 GameObject:
   m_ObjectHideFlags: 0
