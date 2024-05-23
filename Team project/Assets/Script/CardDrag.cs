@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
 {
 
-    private RectTransform rectTransform; // RectTransformÀ¸·Î ÀÏ¹İ Transform ´ëÃ¼
+    private RectTransform rectTransform; // RectTransformìœ¼ë¡œ ì¼ë°˜ Transform ëŒ€ì²´
 
     private void Start()
     {
@@ -19,29 +19,24 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.position = Input.mousePosition;
-        Debug.Log("µå·¹±×");
+        Debug.Log("ë“œë ˆê·¸");
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-       Debug.Log("µå·¹±× Á¾·á");
+       Debug.Log("ë“œë ˆê·¸ ì¢…ë£Œ");
   
-    }
-
-    private void Update()
-    {
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Tile")  // Å¸ÀÏ
+        if (collision.gameObject.tag == "Tile")  // íƒ€ì¼
         {
 
-            // ÃßÈÄ Æ÷Å¾À» »ı¼ºÇØ¶ó ÄÚµå ÀÛ¼º
+            // ì¶”í›„ í¬íƒ‘ì„ ìƒì„±í•˜ëŠ” ì½”ë“œ ì¶”ê°€
 
-            if(gameObject !=  null) //°ÔÀÓ ¿ÀºêÁ§Æ®°¡ Á¸ÀçÇÒ °æ¿ì
+            if(gameObject !=  null) //ê²Œì„ ì˜¤ë¸Œì íŠ¸ê°€ ì¡´ì¬í•  ê²½ìš°
             {
-                return; // µ¹·ÁÁà¶ó
+                return; // ëŒë ¤ì¤˜ë¼
             }
         }
     }
