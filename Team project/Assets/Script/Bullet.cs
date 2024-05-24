@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
+            Destroy(gameObject);
             EnemyMove enemyMove = GetComponent<EnemyMove>();
 
             if(enemyMove != null)
