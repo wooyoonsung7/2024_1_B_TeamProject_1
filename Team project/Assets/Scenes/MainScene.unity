@@ -403,13 +403,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 20519f02fad42a44f98a8ba2c5710f07, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 469050544}
+        m_TargetAssemblyTypeName: GameExit, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 469050543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20519f02fad42a44f98a8ba2c5710f07, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f21d41aa1b171941b3d0ec66fc2a659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &469050545
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1704541898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96f3fe090ba3524288374ee6a9d343f, type: 3}
+  m_Script: {fileID: 11500000, guid: d06141d64ff91624195412a1588e2350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1704541900
