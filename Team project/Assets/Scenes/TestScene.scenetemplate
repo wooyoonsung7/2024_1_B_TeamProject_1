@@ -17,11 +17,19 @@ MonoBehaviour:
   description: 
   preview: {fileID: 0}
   dependencies:
+  - dependency: {fileID: 8854077825884799105, guid: dacc8ea86f01d06419457c1fab8b5113, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 2100000, guid: 54a12224f1d2d7a458ca15c386465f91, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 7725823427977304812, guid: 39d0248741ff33344a4f8d22271f8f32, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 843480380243616311, guid: 4335f9596bd04a944ae4eb4cf833d41a, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 5386366572833467239, guid: b048be30d55ed544eb2ef2e02ffb66d7, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2100000, guid: 957611e3dbfde7f4baf5729035baa2c6, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 1064108502943536577, guid: 3849d2d7fd259e144b63b3ec67dc8ade, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2100000, guid: c41c91dbf8be48344ac82e444d1ec113, type: 2}
     instantiationMode: 0

@@ -10,6 +10,7 @@ TagManager:
   - Point2
   - Point3
   - Point4
+  - Tile
   layers:
   - Default
   - TransparentFX
