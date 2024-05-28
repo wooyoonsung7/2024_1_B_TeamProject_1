@@ -47,6 +47,14 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
+        for (int i = 0; i < 10; i++)
+        {
+            if (gameObject.transform.position == point[i].transform.position)
+            {
+                gameObject.transform.position = new Vector3(point[i + 1].transform.position.x, point[i + 1].transform.position.y, point[i + 1].transform.position.z);
+            }
+        }
+
         if (gameObject.transform.position == pos[0])
         {
             transform.DOMove(pos[1], moveTime);
