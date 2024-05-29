@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,8 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // 윤성아 이라고 되있는거 너가 원하는 데로 지정해
-    public GameObject[] MapBlock = new GameObject[10];
 
     // 싱글톤 인스턴스
     public static GameManager Instance;
@@ -24,7 +23,7 @@ public class GameManager : MonoBehaviour
     private int totalMonsters;
     private int deadMonsters;
 
-    // Awake 메서드 - 싱글톤 패턴 구현
+   // Awake 메서드 - 싱글톤 패턴 구현
     void Awake()
     {
         if (Instance == null)
@@ -43,12 +42,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // "Monster" 태그를 가진 모든 게임 오브젝트의 수를 세어 totalMonsters에 저장
-        totalMonsters = GameObject.FindGameObjectsWithTag("Monster").Length;
+        totalMonsters = GameObject.FindGameObjectsWithTag("Enemy").Length;
         // 죽은 몬스터 수 초기화
         deadMonsters = 0;
         // 클리어 및 게임 오버 UI 비활성화
-        clearUI.SetActive(false);
-        gameOverUI.SetActive(false);
+        //clearUI.SetActive(false);
+        //gameOverUI.SetActive(false);
     }
 
     // 몬스터가 죽을 때 호출되는 메서드

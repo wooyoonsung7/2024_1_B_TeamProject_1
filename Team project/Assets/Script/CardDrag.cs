@@ -20,11 +20,6 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
 
         rectTransform = GetComponent<RectTransform>();
 
-        Debug.Log(Cardlist[0]);
-        Debug.Log(Cardlist[1]);
-        Debug.Log(Cardlist[2]);
-        Debug.Log(Cardlist[3]);
-
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -37,19 +32,23 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
        Debug.Log("드레그 종료");
        if(gameObject == Cardlist[0])
         {
-            this.transform.position = new Vector3(579, 150);
+            this.transform.position = new Vector3(450, 110);
         }
        if (gameObject == Cardlist[1])
         {
-            this.transform.position = new Vector3(828.5701f, 150);
+            this.transform.position = new Vector3(699.5701f, 110);
         }
        if (gameObject == Cardlist[2])
         {
-            this.transform.position = new Vector3(1078.27f, 150);
+            this.transform.position = new Vector3(949.27f, 110);
         }
        if (gameObject == Cardlist[3])
         {
-            this.transform.position = new Vector3(1327.87f, 150);
+            this.transform.position = new Vector3(1198.87f, 110);
+        }
+       if (gameObject == Cardlist[4])
+        {
+            this.transform.position = new Vector3(1452, 110);
         }
 
     }
@@ -59,6 +58,29 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
         if (collision.gameObject.tag == "Tile")  // 타일
         { 
            // 추후 포탑을 생성하는 코드 추가
+        }
+        else
+        {
+            if (gameObject == Cardlist[0])
+            {
+                this.transform.position = new Vector3(450, 110);
+            }
+            if (gameObject == Cardlist[1])
+            {
+                this.transform.position = new Vector3(699.5701f, 110);
+            }
+            if (gameObject == Cardlist[2])
+            {
+                this.transform.position = new Vector3(949.27f, 110);
+            }
+            if (gameObject == Cardlist[3])
+            {
+                this.transform.position = new Vector3(1198.87f, 110);
+            }
+            if (gameObject == Cardlist[4])
+            {
+                this.transform.position = new Vector3(1452, 110);
+            }
         }
     }
 
