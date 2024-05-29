@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
         {
             // 클리어 UI 표시
             ShowClearUI();
+            print("Clear");
         }
     }
 
