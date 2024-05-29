@@ -9,65 +9,43 @@ using DG.Tweening;
 public class EnemyMove : MonoBehaviour
 {
     public float EnemyHp = 10f;
-    // DoTween
-    Tween tween;                    //트윗 선언
-    Vector3[] pos = new Vector3[10];
-  /*Vector3 pos1;
-    Vector3 pos2;
-    Vector3 pos3;
-    Vector3 pos4;*/
-    public GameObject[] point = new GameObject[10];
-  /*public GameObject point1;
-    public GameObject point2;
-    public GameObject point3;
-    public GameObject point4;*/
-    public float moveTime = 6;
-    //public Transform point1;
-    //public float moveSpeed = 1;
 
+    public float speed;
+    public Transform[] target;
+    int a;
 
     void Start()
     {
-        for(int i =0; i<10; i++)
-        {
-            if (point[i] != null)
-            {
-                pos[i] = point[i].transform.position;
-            }
-        }
-        /*  pos1 = point1.transform.position;
-            pos2 = point2.transform.position;
-            pos3 = point3.transform.position;
-            if(point4 != null)
-            {
-                pos4 = point4.transform.position;
-            }*/
-        transform.DOMove(pos[0], moveTime); // 적이 1번 포인트로 6초 동안 간다.
-    }
 
+    }
     void Update()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            if (gameObject.transform.position == point[i].transform.position)
-            {
-                gameObject.transform.position = new Vector3(point[i + 1].transform.position.x, point[i + 1].transform.position.y, point[i + 1].transform.position.z);
-            }
-        }
+        float step = speed * Time.deltaTime;
+        if (transform.position == target[0].position) a = 1;
 
-        if (gameObject.transform.position == pos[0])
+        if (transform.position == target[1].position) a = 2;
+
+        if (transform.position == target[2].position) a = 3;
+
+        if (transform.position == target[3].position) Debug.Log("완료");
+
+        switch (a)
         {
-            transform.DOMove(pos[1], moveTime);
+            case 1:
+            transform.position = Vector3.MoveTowards(transform.position, target[1].position, speed * Time.deltaTime);
+                break;
+            case 2:
+            transform.position = Vector3.MoveTowards(transform.position, target[2].position, step);
+                break;
+            case 3:
+            transform.position = Vector3.MoveTowards(transform.position, target[3].position, step);
+                break;
+
+        //transform.position = Vector3.MoveTowards(transform.position, target[3].position, step);
         }
-        else if (gameObject.transform.position == pos[1])
-        {
-            transform.DOMove(pos[2], moveTime);
-        }
-        else if (gameObject.transform.position == pos[2])
-        {
-            transform.DOMove(pos[3], moveTime);
-        }
-        if (EnemyHp <= 0) Die();
+  
+
+        if (EnemyHp == 0) Die();
     }
     void Die()
     {
