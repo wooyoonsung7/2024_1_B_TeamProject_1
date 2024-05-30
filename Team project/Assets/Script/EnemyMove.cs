@@ -5,18 +5,27 @@ using Unity.VisualScripting;
 using UnityEngine;
 using DG.Tweening;         
 
-
 public class EnemyMove : MonoBehaviour
 {
-    public float EnemyHp = 10f;
+    public static EnemyMove Instance;
+    public GameObject towerController;
 
-    public float speed;
+    public string EnemyName;
+    public int EnemyHp = 10;
+    public float speed = 5f;
     public Transform[] target;
     int a;
 
-    void Start()
+    private void Awake()
     {
-
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     void Update()
     {
@@ -40,19 +49,18 @@ public class EnemyMove : MonoBehaviour
             case 3:
             transform.position = Vector3.MoveTowards(transform.position, target[3].position, step);
                 break;
-
-        //transform.position = Vector3.MoveTowards(transform.position, target[3].position, step);
         }
-  
-
-        if (EnemyHp == 0) Die();
     }
-    void Die()
+    public void OnDamage()
     {
-        gameObject.SetActive(false);
-        print("적사망");
-        // Tween.kill();     //해당 트윈을 종료한다. // 문제 해결후 사용
-    }
+        Debug.Log("된다");
+        EnemyHp -= towerController.GetComponent<TowerController>().attackValue;
 
+        if (EnemyHp == 0)
+        {
+            Debug.Log("된다2");
+            Destroy(gameObject);
+        }
+    }
 
 }

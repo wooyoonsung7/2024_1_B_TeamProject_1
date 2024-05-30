@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int speed = 1;
-    public int AttackVelue = 1;
+    public float speed = 1;
     Rigidbody rb;
     void Start()
     {
@@ -19,12 +18,7 @@ public class Bullet : MonoBehaviour
         if(other.tag == "Enemy")
         {
             Destroy(gameObject);
-            EnemyMove enemyMove = GetComponent<EnemyMove>();
-
-            if(enemyMove != null)
-            {
-                enemyMove.EnemyHp -= AttackVelue;
-            }
+            EnemyMove.Instance.OnDamage();
         }
     }
 }

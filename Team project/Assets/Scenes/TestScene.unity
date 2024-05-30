@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 28591989}
   - component: {fileID: 28591988}
   m_Layer: 0
-  m_Name: BreadTower
+  m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5386366572833467239, guid: b048be30d55ed544eb2ef2e02ffb66d7, type: 3}
-  AttackInterval: 0.1
+  AttackInterval: 0.5
+  n_tr: {fileID: 28591992}
+  halfSize: 3.5
+  n_LayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  bulletSpeed: 15
+  attackValue: 2
 --- !u!65 &28591989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -237,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 28591987}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.07, y: 1.16, z: -15.08}
+  m_LocalPosition: {x: -0.24, y: 1.16, z: -11.54}
   m_LocalScale: {x: 0.8, y: 1.2, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -489,7 +496,7 @@ GameObject:
   - component: {fileID: 273959203}
   - component: {fileID: 273959202}
   - component: {fileID: 273959207}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -623,8 +630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c74bcfc08e28d4a839db79c570df87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyName: 
   EnemyHp: 10
-  speed: 8
+  speed: 3
   target:
   - {fileID: 1962505752}
   - {fileID: 2064726567}
