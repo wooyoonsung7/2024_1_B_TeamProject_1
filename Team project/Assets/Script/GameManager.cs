@@ -23,7 +23,12 @@ public class GameManager : MonoBehaviour
     private int totalMonsters;
     private int deadMonsters;
 
-   // Awake 메서드 - 싱글톤 패턴 구현
+    private ClearUIManager clearUIManager; // 클리어 UI를 관리하는 ClearUIManager를 연결
+
+
+
+
+    // Awake 메서드 - 싱글톤 패턴 구현
     void Awake()
     {
         if (Instance == null)
@@ -48,6 +53,7 @@ public class GameManager : MonoBehaviour
         // 클리어 및 게임 오버 UI 비활성화
         //clearUI.SetActive(false);
         //gameOverUI.SetActive(false);
+        clearUIManager = FindObjectOfType<ClearUIManager>(); // ClearUIManager 찾기
     }
 
     // 몬스터가 죽을 때 호출되는 메서드
@@ -59,29 +65,39 @@ public class GameManager : MonoBehaviour
         if (deadMonsters >= totalMonsters)
         {
             // 클리어 UI 표시
-            ShowClearUI();
+            clearUIManager.ShowClearUI();
             print("Clear");
         }
     }
 
-    // 플레이어가 죽을 때 호출되는 메서드
-    public void PlayerDied()
+    // 게임 오버 처리
+    public void GameOver()
     {
-        // 게임 오버 UI 표시
-        ShowGameOverUI();
-    }
-
-    // 클리어 UI를 표시하는 메서드
-    void ShowClearUI()
-    {
-        clearUI.SetActive(true);
-    }
-
-    // 게임 오버 UI를 표시하는 메서드
-    void ShowGameOverUI()
-    {
+        // 게임 오버 UI 활성화
         gameOverUI.SetActive(true);
+        // 게임을 멈추기 위해 Time.timeScale을 0으로 설정
+        Time.timeScale = 0f;
+        Debug.Log("Game Over!");
     }
+
+
+
+    // 클리어 처리
+    public void CheckClear()
+    {
+        deadMonsters++; // 죽은 몬스터 수 증가
+        // 모든 몬스터가 죽었는지 확인
+        if (deadMonsters >= totalMonsters)
+        {
+            // 클리어 UI 활성화
+            clearUI.SetActive(true);
+            // 게임을 멈추기 위해 Time.timeScale을 0으로 설정
+            Time.timeScale = 0f;
+            Debug.Log("Clear!");
+        }
+    }
+
+
 
     // 다음 레벨 버튼을 클릭했을 때 호출되는 메서드
     public void OnNextLevelButton()
@@ -90,18 +106,20 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(TestSceneTwo);
     }
 
-    // 재시도 버튼을 클릭했을 때 호출되는 메서드
-    public void OnRetryButton()
+    // 메인 씬으로 이동하는 메서드
+    public void GoToMainScene()
     {
-        // 현재 씬을 다시 로드
-        SceneManager.LoadScene("TestScene");
+        // 메인 씬을 로드
+        SceneManager.LoadScene("MainScene");
     }
 
-    // 메인 메뉴 버튼을 클릭했을 때 호출되는 메서드
-    public void OnMainMenuButton()
+    // 게임을 재시작하는 메서드
+    public void RestartGame()
     {
-        // 메인 메뉴 씬을 로드
-        SceneManager.LoadScene(MainScene);
+        // Time.timeScale을 1로 설정하여 게임을 다시 시작
+        Time.timeScale = 1f;
+        // "TestScene" 씬을 로드
+        SceneManager.LoadScene("TestScene");
     }
 }
 
