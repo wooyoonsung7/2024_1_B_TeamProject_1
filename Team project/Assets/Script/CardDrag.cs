@@ -21,15 +21,20 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData) 
     {
         rectTransform.position = Input.mousePosition;
+
         if (gameObject == Cardlist[0]) print(Cardlist[0]);
+
         if (gameObject == Cardlist[1]) print(Cardlist[1]);
+
         if (gameObject == Cardlist[2]) print(Cardlist[2]);
+
         if (gameObject == Cardlist[3]) print(Cardlist[3]);
+
         if (gameObject == Cardlist[4]) print(Cardlist[4]);
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        if(gameObject == Cardlist[0]) this.transform.position = new Vector3(450, 110);
+        if (gameObject == Cardlist[0]) this.transform.position = new Vector3(450, 110);
 
         if (gameObject == Cardlist[1]) this.transform.position = new Vector3(699.5701f, 110);
 
