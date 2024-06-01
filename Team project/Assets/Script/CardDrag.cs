@@ -21,16 +21,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData) 
     {
         rectTransform.position = Input.mousePosition;
-
-        if (gameObject == Cardlist[0]) print(Cardlist[0]);
-
-        if (gameObject == Cardlist[1]) print(Cardlist[1]);
-
-        if (gameObject == Cardlist[2]) print(Cardlist[2]);
-
-        if (gameObject == Cardlist[3]) print(Cardlist[3]);
-
-        if (gameObject == Cardlist[4]) print(Cardlist[4]);
+        Debug.Log(gameObject);
     }
     public void OnEndDrag(PointerEventData eventData)
     {
@@ -50,7 +41,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if (collision.gameObject.tag == "CardUIPoint") 
         {
-            Debug.Log(gameObject + "충돌되었습니다.");
+            Debug.Log(gameObject +" 샹효작용");
         } 
     }
 }
