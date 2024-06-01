@@ -48,6 +48,9 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "CardUIPoint") Debug.Log(gameObject + "충돌되었습니다.");
+        if (collision.gameObject.tag == "CardUIPoint") 
+        {
+            Debug.Log(gameObject + "충돌되었습니다.");
+        } 
     }
 }
