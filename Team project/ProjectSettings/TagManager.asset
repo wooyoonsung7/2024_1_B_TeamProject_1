@@ -12,6 +12,12 @@ TagManager:
   - Point4
   - Tile
   - Tower
+  - Card01
+  - Card02
+  - Card03
+  - Card04
+  - Card05
+  - CardUIPoint
   layers:
   - Default
   - TransparentFX

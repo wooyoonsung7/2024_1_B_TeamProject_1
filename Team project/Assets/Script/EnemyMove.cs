@@ -76,15 +76,15 @@ public class EnemyMove : MonoBehaviour
                 Destroy(gameObject);                                        // 몬스터를 파괴.
             }
         }
-        else if (other.CompareTag("Entrance"))
-        {
-            GameManager gameManager = FindObjectOfType<GameManager>(); // GameManager 인스턴스 찾기
-            if (gameManager != null)
-            {
-                gameManager.CheckClear(); // 클리어 조건 확인
-            }
-            Destroy(gameObject); // 몬스터를 파괴.
-        }
+        //else if (other.CompareTag("Entrance"))
+        //{
+        //    GameManager gameManager = FindObjectOfType<GameManager>(); // GameManager 인스턴스 찾기
+        //    if (gameManager != null)
+        //    {
+        //        gameManager.CheckClear(); // 클리어 조건 확인
+        //    }
+        //    Destroy(gameObject); // 몬스터를 파괴.
+        //}
     }
 
 }
