@@ -5,6 +5,12 @@ using UnityEngine;
 public class CardTowerpointScript : MonoBehaviour
 {
     public GameObject[] _cardTowerPoint;
+    public static CardTowerpointScript instance;
+
+     void Awake()
+    {
+        if(instance != null) Destroy(this);else instance = this;
+    }
     void Start()
     {
         for(int i = 0 ; i < _cardTowerPoint.Length ; i++) 
@@ -14,7 +20,7 @@ public class CardTowerpointScript : MonoBehaviour
         }
     }
 
-    void CardPointTower()
+    public void CardPointTower()
     {
         _cardTowerPoint[0].SetActive(true);
         //_cardTowerPoint[1].SetActive(true);

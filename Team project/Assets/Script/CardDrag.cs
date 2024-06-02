@@ -1,9 +1,11 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+/*using DG.Tweening;  */    // 추후 미세 요소 개발시 사용
 
 public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
 {
@@ -16,6 +18,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+ 
     }
 
     public void OnDrag(PointerEventData eventData) 
@@ -42,6 +45,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
         if (collision.gameObject.tag == "CardUIPoint") 
         {
             Debug.Log(gameObject +" 샹효작용");
+            CardTowerpointScript.instance.CardPointTower();
         } 
     }
 }
