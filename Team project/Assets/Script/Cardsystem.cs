@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 /*using DG.Tweening;  */    // 추후 미세 요소 개발시 사용
 
-public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
+public class Cardsystem : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public GameObject[] Cardlist;
     public GameObject[] _cardTowerPoint;
@@ -44,10 +44,15 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     public void CardPointTower()
     {
         if(gameObject == Cardlist[0]) _cardTowerPoint[0].SetActive(true);
+
         if(gameObject == Cardlist[1]) _cardTowerPoint[1].SetActive(true);
+
         if(gameObject == Cardlist[2]) _cardTowerPoint[2].SetActive(true);
-        if(gameObject == Cardlist[3]) _cardTowerPoint[3].SetActive(true);
+
+        if (gameObject == Cardlist[3]) _cardTowerPoint[3].SetActive(true);
+
         if(gameObject == Cardlist[4]) _cardTowerPoint[4].SetActive(true);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
