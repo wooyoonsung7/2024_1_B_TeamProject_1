@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public GameObject[] Cardlist;
+    public GameObject[] _cardTowerPoint;
     public bool isDrag;
     public bool isDrop;
   
@@ -40,12 +41,54 @@ public class CardDrag : MonoBehaviour, IDragHandler, IEndDragHandler
 
     }
 
+    public void CardPointTower()
+    {
+        if(gameObject == Cardlist[0]) _cardTowerPoint[0].SetActive(true);
+        if(gameObject == Cardlist[1]) _cardTowerPoint[1].SetActive(true);
+        if(gameObject == Cardlist[2]) _cardTowerPoint[2].SetActive(true);
+        if(gameObject == Cardlist[3]) _cardTowerPoint[3].SetActive(true);
+        if(gameObject == Cardlist[4]) _cardTowerPoint[4].SetActive(true);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "CardUIPoint") 
+        if (collision.gameObject.tag == "CardPont01") 
         {
-            Debug.Log(gameObject +" 샹효작용");
-            CardTowerpointScript.instance.CardPointTower();
-        } 
+            if (gameObject == Cardlist[0]) CardPointTower();
+                                           
+            if (gameObject == Cardlist[1]) CardPointTower();
+                                           
+            if (gameObject == Cardlist[2]) CardPointTower();
+                                           
+            if (gameObject == Cardlist[3]) CardPointTower();
+                                           
+            if (gameObject == Cardlist[4]) CardPointTower();
+        }
+
+        if (collision.gameObject.tag == "CardPont02")
+        {
+            if (gameObject == Cardlist[0]) CardPointTower();
+
+            if (gameObject == Cardlist[1]) CardPointTower();
+
+            if (gameObject == Cardlist[2]) CardPointTower();
+
+            if (gameObject == Cardlist[3]) CardPointTower();
+
+            if (gameObject == Cardlist[4]) CardPointTower();
+        }
+
+        if (collision.gameObject.tag == "CardPont03")
+        {
+            if (gameObject == Cardlist[0]) CardPointTower();
+
+            if (gameObject == Cardlist[1]) CardPointTower();
+
+            if (gameObject == Cardlist[2]) CardPointTower();
+
+            if (gameObject == Cardlist[3]) CardPointTower();
+
+            if (gameObject == Cardlist[4]) CardPointTower();
+        }
     }
 }

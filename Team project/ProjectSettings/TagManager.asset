@@ -17,7 +17,9 @@ TagManager:
   - Card03
   - Card04
   - Card05
-  - CardUIPoint
+  - CardPont01
+  - CardPont02
+  - CardPont03
   layers:
   - Default
   - TransparentFX
