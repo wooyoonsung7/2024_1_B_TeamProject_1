@@ -31,15 +31,15 @@ public class Cardsystem : MonoBehaviour, IDragHandler, IEndDragHandler
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (gameObject == Cardlist[0]) this.transform.position = new Vector3(450, 110);
+        if (gameObject == Cardlist[0]) this.transform.position = new Vector3(602, 123);
 
-        if (gameObject == Cardlist[1]) this.transform.position = new Vector3(699.5701f, 110);
+        if (gameObject == Cardlist[1]) this.transform.position = new Vector3(791, 123);
 
-        if (gameObject == Cardlist[2]) this.transform.position = new Vector3(949.27f, 110);
+        if (gameObject == Cardlist[2]) this.transform.position = new Vector3(980, 123);
 
-        if (gameObject == Cardlist[3]) this.transform.position = new Vector3(1198.87f, 110);
+        if (gameObject == Cardlist[3]) this.transform.position = new Vector3(1169, 123);
 
-        if (gameObject == Cardlist[4]) this.transform.position = new Vector3(1452, 110);
+        if (gameObject == Cardlist[4]) this.transform.position = new Vector3(1358, 123);
 
     }
 
