@@ -13,13 +13,15 @@ public class Cardsystem : MonoBehaviour, IDragHandler, IEndDragHandler
     public GameObject[] _cardTowerPoint;
     public bool isDrag;
     public bool isDrop;
-  
+    public bool _cardTowerPointCake;
+
+
     private RectTransform rectTransform;
 
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
- 
+        _cardTowerPointCake = false;
     }
 
     public void OnDrag(PointerEventData eventData) 
@@ -43,57 +45,46 @@ public class Cardsystem : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void CardPointTower()
     {
-        if(gameObject == Cardlist[0]) _cardTowerPoint[0].SetActive(true);
+        if (gameObject == Cardlist[0]) _cardTowerPoint[0].SetActive(true); _cardTowerPointCake = true;
 
-        if(gameObject == Cardlist[1]) _cardTowerPoint[1].SetActive(true);
+        if (gameObject == Cardlist[1]) _cardTowerPoint[1].SetActive(true); _cardTowerPointCake = true;
 
-        if(gameObject == Cardlist[2]) _cardTowerPoint[2].SetActive(true);
+        if (gameObject == Cardlist[2]) _cardTowerPoint[2].SetActive(true); _cardTowerPointCake = true;
 
-        if (gameObject == Cardlist[3]) _cardTowerPoint[3].SetActive(true);
+        if (gameObject == Cardlist[3]) _cardTowerPoint[3].SetActive(true); _cardTowerPointCake = true;
 
-        if(gameObject == Cardlist[4]) _cardTowerPoint[4].SetActive(true);
+        if (gameObject == Cardlist[4]) _cardTowerPoint[4].SetActive(true); _cardTowerPointCake = true;
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "CardPont01") 
+        while (true)
         {
-            if (gameObject == Cardlist[0]) CardPointTower();
-                                           
-            if (gameObject == Cardlist[1]) CardPointTower();
-                                           
-            if (gameObject == Cardlist[2]) CardPointTower();
-                                           
-            if (gameObject == Cardlist[3]) CardPointTower();
-                                           
-            if (gameObject == Cardlist[4]) CardPointTower();
-        }
+            if (_cardTowerPointCake == true)
+            {
+                Debug.Log("이미 아군이 존재합니다.");
+                
+                break;
+            }
+            else
+            {
+                if (collision.gameObject.tag == "CardPont01")
+                {
+                    if (gameObject == Cardlist[0]) CardPointTower(); 
 
-        if (collision.gameObject.tag == "CardPont02")
-        {
-            if (gameObject == Cardlist[0]) CardPointTower();
+                    if (gameObject == Cardlist[1]) CardPointTower(); 
 
-            if (gameObject == Cardlist[1]) CardPointTower();
+                    if (gameObject == Cardlist[2]) CardPointTower(); 
 
-            if (gameObject == Cardlist[2]) CardPointTower();
+                    if (gameObject == Cardlist[3]) CardPointTower(); 
 
-            if (gameObject == Cardlist[3]) CardPointTower();
+                    if (gameObject == Cardlist[4]) CardPointTower();
 
-            if (gameObject == Cardlist[4]) CardPointTower();
-        }
-
-        if (collision.gameObject.tag == "CardPont03")
-        {
-            if (gameObject == Cardlist[0]) CardPointTower();
-
-            if (gameObject == Cardlist[1]) CardPointTower();
-
-            if (gameObject == Cardlist[2]) CardPointTower();
-
-            if (gameObject == Cardlist[3]) CardPointTower();
-
-            if (gameObject == Cardlist[4]) CardPointTower();
+                    break;
+                }
+            }
+            break;
         }
     }
 }
