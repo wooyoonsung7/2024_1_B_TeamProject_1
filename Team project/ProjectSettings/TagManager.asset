@@ -20,6 +20,7 @@ TagManager:
   - CardPont01
   - CardPont02
   - CardPont03
+  - Monster
   layers:
   - Default
   - TransparentFX
