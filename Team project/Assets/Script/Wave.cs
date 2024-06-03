@@ -5,14 +5,23 @@ using UnityEngine;
 public class Wave : MonoBehaviour
 {
     public GameObject[] monster;
-    void Start()
-    {
-        Instantiate(monster[0], transform.position, Quaternion.identity);
-    }
+    public float[] spawnTime;
+    float Timer = 0;
+    int i = 0;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        Timer += Time.deltaTime;
+        if (Timer >= spawnTime[i])
+        {
+            Instance();
+            Timer = 0;
+            if(i < monster.Length - 1)
+            i++;
+        }
+    }
+    public void Instance()
+    {
+        Instantiate(monster[i], transform.position, Quaternion.identity);
     }
 }

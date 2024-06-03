@@ -24,31 +24,16 @@ public class EnemyMove : MonoBehaviour
         for(int i = 0; i < 3; i++)
         {
             target[i] = gameManager.point[i];
-            Move();
-            a = 1;
         }
+        a = 1;
     }
     void Update()
     {
         float step = speed * Time.deltaTime;
-        if (transform.position == target[0].position)
-        {
-            Move();
-            a = 2;
-        }
+        if (transform.position == target[0].position) a = 2;
 
-        if (transform.position == target[1].position)
-        {
-            Move();
-            a = 3;
-        }
+        if (transform.position == target[1].position) a = 3;
 
-        //if (transform.position == target[2].position) a = 4;
-        //변환되는 것(행동의 바뀌는 것은 메서드를 사용하는 것이 좋다)
-    }
-
-    public void Move()
-    {
         switch (a)
         {
             case 1:
@@ -61,16 +46,15 @@ public class EnemyMove : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, target[2].position, step);
                 break;
         }
+        //if (transform.position == target[2].position) a = 4;
+        //변환되는 것(행동의 바뀌는 것은 메서드를 사용하는 것이 좋다), Vector3.MoveTowards는 Update()안에서만 쓸 수 있는 것 같다.
     }
-
     public void OnDamage()
     {
-        Debug.Log("된다");
         EnemyHp -= towerController.GetComponent<TowerController>().attackValue;
 
         if (EnemyHp == 0)
         {
-            Debug.Log("된다2");
             Destroy(gameObject);
         }
     }

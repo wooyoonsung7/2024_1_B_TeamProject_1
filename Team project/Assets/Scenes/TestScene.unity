@@ -3340,7 +3340,6 @@ Transform:
   - {fileID: 1895815845}
   - {fileID: 1008170960}
   - {fileID: 2144067336}
-  - {fileID: 1962505752}
   - {fileID: 2064726567}
   - {fileID: 1827172854}
   - {fileID: 1597088752}
@@ -4088,6 +4087,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster:
   - {fileID: 3843800854857512386, guid: 84bbcba624982ec44b842d991ca6d575, type: 3}
+  - {fileID: 3843800854857512386, guid: 84bbcba624982ec44b842d991ca6d575, type: 3}
+  - {fileID: 3843800854857512386, guid: 84bbcba624982ec44b842d991ca6d575, type: 3}
+  - {fileID: 3843800854857512386, guid: 84bbcba624982ec44b842d991ca6d575, type: 3}
+  spawnTime:
+  - 1
+  - 1
+  - 1
+  - 4
 --- !u!4 &1684664332
 Transform:
   m_ObjectHideFlags: 0
@@ -4933,59 +4940,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1962505750
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1962505752}
-  - component: {fileID: 1962505751}
-  m_Layer: 0
-  m_Name: StartPoint
-  m_TagString: Point1
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!135 &1962505751
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962505750}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1962505752
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962505750}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.7, z: 4.84}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1282130125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2033852592
 GameObject:
   m_ObjectHideFlags: 0
