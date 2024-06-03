@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 1059216766840462945}
   - component: {fileID: 3703179576860850533}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Yacht
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,6 +333,8 @@ MonoBehaviour:
   EnemyHp: 10
   speed: 3
   target:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

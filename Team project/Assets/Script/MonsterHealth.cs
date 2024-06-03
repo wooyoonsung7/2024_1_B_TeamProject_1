@@ -23,7 +23,7 @@ public class MonsterHealth : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("HealthSlider is not assigned!");
+            //Debug.LogWarning("HealthSlider is not assigned!");
         }
     }
 

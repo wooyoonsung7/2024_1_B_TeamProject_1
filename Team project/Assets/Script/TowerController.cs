@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 public class TowerController : MonoBehaviour
 {
-    private Transform target;
+    private Transform[] target = new Transform[6];
     private float AttackTimer;
     public GameObject bulletPrefab;
     public float AttackInterval = 3f;  // 포탑의 공격시간간격
@@ -19,8 +21,13 @@ public class TowerController : MonoBehaviour
 
     void Start()
     {
+        GameManager gameManager = GameManager.Instance;
         AttackTimer = 0;
-        target = FindObjectOfType<EnemyMove>().transform;
+
+        for (int i = 0; i < 6; i++)
+        {
+            target[i] = gameManager.monster[i];
+        }
     }
 
     void Update()
@@ -37,17 +44,17 @@ public class TowerController : MonoBehaviour
                 {
                     bulletPrefab.GetComponent<Bullet>().speed = bulletSpeed;
                     GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                    bullet.transform.LookAt(target);
+                    for (int i = 0; i < 6; i++)
+                    {
+                        bullet.transform.LookAt(target[i]);
+                    }
                 }
             }
         }
     }
     private void OnDrawGizmos()
     {
-        if(target != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawSphere(n_tr.position, halfSize);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(n_tr.position, halfSize);
     }
 }

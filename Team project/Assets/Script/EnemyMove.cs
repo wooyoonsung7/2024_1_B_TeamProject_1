@@ -13,7 +13,7 @@ public class EnemyMove : MonoBehaviour
     public string EnemyName;
     public int EnemyHp = 10;
     public float speed = 5f;
-    public Transform[] target = new Transform[3];
+    public Transform[] target = new Transform[5];
     public float step;
     int a;
 
@@ -21,7 +21,7 @@ public class EnemyMove : MonoBehaviour
     {
         GameManager gameManager = GameManager.Instance;
 
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 5; i++)
         {
             target[i] = gameManager.point[i];
         }
@@ -34,6 +34,13 @@ public class EnemyMove : MonoBehaviour
 
         if (transform.position == target[1].position) a = 3;
 
+        if (transform.position == target[2].position) a = 4;
+
+        if (transform.position == target[3].position) a = 5;
+
+        if (transform.position == target[4].position) 
+            Destroy(gameObject);
+
         switch (a)
         {
             case 1:
@@ -44,6 +51,12 @@ public class EnemyMove : MonoBehaviour
                 break;
             case 3:
                 transform.position = Vector3.MoveTowards(transform.position, target[2].position, step);
+                break;
+            case 4:
+                transform.position = Vector3.MoveTowards(transform.position, target[3].position, step);
+                break;
+            case 5:
+                transform.position = Vector3.MoveTowards(transform.position, target[4].position, step);
                 break;
         }
         //if (transform.position == target[2].position) a = 4;

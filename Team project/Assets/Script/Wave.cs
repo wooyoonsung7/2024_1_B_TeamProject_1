@@ -16,8 +16,8 @@ public class Wave : MonoBehaviour
         {
             Instance();
             Timer = 0;
-            if(i < monster.Length - 1)
-            i++;
+            if (i < monster.Length - 1) i++;
+            else Destroy(gameObject);  //더 이상 소환안되게 하는 장치
         }
     }
     public void Instance()

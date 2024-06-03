@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 1;
     Rigidbody rb;
+    EnemyMove enemyMove;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -17,8 +18,8 @@ public class Bullet : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
+            enemyMove.GetComponent<EnemyMove>().OnDamage();
             Destroy(gameObject);
-            gameObject.GetComponent<EnemyMove>().OnDamage();
         }
     }
 }
