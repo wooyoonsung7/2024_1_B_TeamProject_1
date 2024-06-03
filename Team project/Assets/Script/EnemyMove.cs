@@ -6,52 +6,63 @@ using UnityEngine;
 using DG.Tweening;
 
 public class EnemyMove : MonoBehaviour
-{
-    public static EnemyMove Instance;
+{    
     public GameObject towerController;
     public int damage = 1; // 몬스터가 입구에 도달했을 때 입히는 데미지
 
     public string EnemyName;
     public int EnemyHp = 10;
     public float speed = 5f;
-    public Transform[] target;
+    public Transform[] target = new Transform[3];
+    public float step;
     int a;
 
-    private void Awake()
+    void Start() 
     {
-        if (Instance == null)
+        GameManager gameManager = GameManager.Instance;
+
+        for(int i = 0; i < 3; i++)
         {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
+            target[i] = gameManager.point[i];
+            Move();
+            a = 1;
         }
     }
     void Update()
     {
         float step = speed * Time.deltaTime;
-        if (transform.position == target[0].position) a = 1;
+        if (transform.position == target[0].position)
+        {
+            Move();
+            a = 2;
+        }
 
-        if (transform.position == target[1].position) a = 2;
+        if (transform.position == target[1].position)
+        {
+            Move();
+            a = 3;
+        }
 
-        if (transform.position == target[2].position) a = 3;
+        //if (transform.position == target[2].position) a = 4;
+        //변환되는 것(행동의 바뀌는 것은 메서드를 사용하는 것이 좋다)
+    }
 
-        if (transform.position == target[3].position) Debug.Log("완료");
-
+    public void Move()
+    {
         switch (a)
         {
             case 1:
-                transform.position = Vector3.MoveTowards(transform.position, target[1].position, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, target[0].position, step);
                 break;
             case 2:
-                transform.position = Vector3.MoveTowards(transform.position, target[2].position, step);
+                transform.position = Vector3.MoveTowards(transform.position, target[1].position, step);
                 break;
             case 3:
-                transform.position = Vector3.MoveTowards(transform.position, target[3].position, step);
+                transform.position = Vector3.MoveTowards(transform.position, target[2].position, step);
                 break;
         }
     }
+
     public void OnDamage()
     {
         Debug.Log("된다");

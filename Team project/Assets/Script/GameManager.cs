@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
     // 싱글톤 인스턴스
     public static GameManager Instance;
 
@@ -23,9 +22,9 @@ public class GameManager : MonoBehaviour
     private int totalMonsters;
     private int deadMonsters;
 
+    public Transform[] point = new Transform[3]; //
+
     private ClearUIManager clearUIManager; // 클리어 UI를 관리하는 ClearUIManager를 연결
-
-
 
 
     // Awake 메서드 - 싱글톤 패턴 구현
