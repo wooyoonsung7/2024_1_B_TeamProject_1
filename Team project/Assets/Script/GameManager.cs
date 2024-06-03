@@ -17,14 +17,12 @@ public class GameManager : MonoBehaviour
     // 다음 씬 및 메인 메뉴 씬 이름
     public string TestSceneTwo;
     public string MainScene;
-
-    // 몬스터의 총 수 및 죽은 몬스터 수
+    public int totalWaves = 3; // 총 웨이브 수
+    private int currentWave = 0; // 현재 웨이브 
+    public Transform[] point = new Transform[3]; 
+    private ClearUIManager clearUIManager; // 클리어 UI를 관리하는 ClearUIManager를 연결
     private int totalMonsters;
     private int deadMonsters;
-
-    public Transform[] point = new Transform[3]; //
-
-    private ClearUIManager clearUIManager; // 클리어 UI를 관리하는 ClearUIManager를 연결
 
 
     // Awake 메서드 - 싱글톤 패턴 구현
@@ -53,21 +51,54 @@ public class GameManager : MonoBehaviour
         //clearUI.SetActive(false);
         //gameOverUI.SetActive(false);
         clearUIManager = FindObjectOfType<ClearUIManager>(); // ClearUIManager 찾기
+        StartNextWave();          // 첫 번째 웨이브 시작
+        clearUI.SetActive(false);
+        gameOverUI.SetActive(false);
+        clearUI = GameObject.Find("GameClearUI"); // 여기서 "YourClearUIObjectName"은 실제 clearUI GameObject의 이름입니다.
+        gameOverUI = GameObject.Find("GameOverUI");
     }
 
-    // 몬스터가 죽을 때 호출되는 메서드
+    void StartNextWave()
+    {
+        // 현재 웨이브의 몬스터 수 초기화
+        totalMonsters = GameObject.FindGameObjectsWithTag("Monster").Length;
+        deadMonsters = 0;
+    }
+
     public void MonsterDied()
     {
-        // 죽은 몬스터 수 증가
         deadMonsters++;
-        // 모든 몬스터가 죽었는지 확인
         if (deadMonsters >= totalMonsters)
         {
-            // 클리어 UI 표시
-            clearUIManager.ShowClearUI();
-            print("Clear");
+            NextWave();
         }
     }
+
+    void NextWave()
+    {
+        currentWave++;
+        if (currentWave >= totalWaves)
+        {
+            // 클리어 UI 표시
+            ShowClearUI(); // 추가된 부분 주석 처리
+        }
+        else
+        {
+            // 다음 웨이브 시작
+            StartNextWave();
+        }
+    }
+
+    void ShowClearUI()
+    {
+        clearUI.SetActive(true);
+    }
+
+
+
+   
+
+
 
     // 게임 오버 처리
     public void GameOver()
