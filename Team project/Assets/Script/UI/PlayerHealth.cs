@@ -8,7 +8,6 @@ public class PlayerHealth : MonoBehaviour
     public Image healthBarFillImage; // 체력 바의 Fill 이미지
     public int maxHealth = 5; // 최대 체력 값
     private int currentHealth; // 현재 체력 값
-    private GameManager gameManager;
 
     void Start()
     {
@@ -26,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
         // 체력이 0이 되었을 때 처리
         if (currentHealth == 0)
         {
-            gameManager.GameOver();
+            UIManager.Instance.GameOver();
         }
     }
 
