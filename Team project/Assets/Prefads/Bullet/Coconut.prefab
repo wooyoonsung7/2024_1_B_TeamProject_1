@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5509375981640928549}
   - component: {fileID: 2899378824712721939}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Untagged
+  m_Name: Coconut
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5386366572833467239}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: 4ddabc884cc65f74195fa16ee6a38f79, type: 3}
 --- !u!23 &7066601585154259088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 957611e3dbfde7f4baf5729035baa2c6, type: 2}
+  - {fileID: 2100000, guid: 4bbfd9f4e4c7b61498c1a07da553dea5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,5 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4dc03a967ac80043b5922142b2fb233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  AttackVelue: 1
+  speed: 15
+  index: 0
+  attackValue: 20

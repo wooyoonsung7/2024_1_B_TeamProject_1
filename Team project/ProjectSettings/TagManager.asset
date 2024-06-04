@@ -5,11 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Point
-  - Point1
-  - Point2
-  - Point3
-  - Point4
   - Tile
   - Tower
   - Card01
@@ -21,6 +16,7 @@ TagManager:
   - CardPont02
   - CardPont03
   - Monster
+  - Bullet
   layers:
   - Default
   - TransparentFX

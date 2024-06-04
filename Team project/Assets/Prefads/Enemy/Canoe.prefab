@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 1059216766840462945}
   - component: {fileID: 3703179576860850533}
   m_Layer: 6
-  m_Name: Moter_Boat
+  m_Name: Canoe
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c74bcfc08e28d4a839db79c570df87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerController: {fileID: 0}
+  bulletPf: {fileID: 5386366572833467239, guid: b048be30d55ed544eb2ef2e02ffb66d7, type: 3}
   damage: 1
   EnemyName: 
   EnemyHp: 10

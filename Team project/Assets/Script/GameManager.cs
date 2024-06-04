@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
     public int totalWaves = 3; // 총 웨이브 수
     private int currentWave = 0; // 현재 웨이브 
     public Transform[] point = new Transform[5]; // 포인트배열
-    public Transform[] monster = new Transform[6];
-
     private ClearUIManager clearUIManager; // 클리어 UI를 관리하는 ClearUIManager를 연결
     private int totalMonsters;
     private int deadMonsters;
