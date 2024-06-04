@@ -93,7 +93,6 @@ public class EnemyMove : MonoBehaviour
     public void OnDamage(GameObject temp)
     {
         EnemyHp -= temp.GetComponent<Bullet>().attackValue;
-        Debug.Log("적 : " + temp.GetComponent<Bullet>().attackValue);
 
         if (EnemyHp <= 0)
         {

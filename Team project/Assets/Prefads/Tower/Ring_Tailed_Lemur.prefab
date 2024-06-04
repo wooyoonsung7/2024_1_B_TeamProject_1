@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5386366572833467239, guid: b048be30d55ed544eb2ef2e02ffb66d7, type: 3}
-  index: 2
+  coinValue: 25
   AttackInterval: 0.5
   n_tr: {fileID: 4322533331965072787}
   halfSize: 3.5
@@ -127,4 +127,3 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   bulletSpeed: 15
-  attackValue: 2

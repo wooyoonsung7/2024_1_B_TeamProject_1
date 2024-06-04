@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5386366572833467239, guid: 016c950a25710de42b20b7f0ab86f5eb, type: 3}
-  index: 4
+  coinValue: 65
   AttackInterval: 0.5
   n_tr: {fileID: 1550635211567208109}
   halfSize: 3.5

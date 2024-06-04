@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public Transform[] point = new Transform[5];                 // 이동포인트배열
-    public GameObject[] monster = new GameObject[1];             //생성할 몬스터지정
-    public float[] spawnTime = new float[1];                     //이전 몬스터생성 후, 다음 몬스토생성까지의 시간
-    float Timer = 0;
-    int i = 0;
+    public Transform[] point = new Transform[5];                          // 이동포인트배열
 
+    [SerializeField] Text text;
+    public float coin = 20;                                               //초기 지원자금
+    public float coinRate = 2.5f;                               //코인 증가비율
     void Awake()
     {
         if (Instance == null)
@@ -26,21 +26,34 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    void Start()
+    {
+        //코인을 사용한 만큼 수치가 줄어든다.
+        StartCoroutine(co_timer());
+    }
     void Update()
     {
-        Timer += Time.deltaTime;
-        if (Timer >= spawnTime[i])
+        Debug.Log(coin);
+        //만약에 준비시간이 끝나고 나면 이라는 조건추가  +  줄어들고나서의 코인 수치값을 넣기
+        //StartCoroutine(co_timer(20, 3));
+    }
+
+    IEnumerator co_timer()
+    {
+        while (true)
         {
-            Spawn();
-            Timer = 0;
-            if (i < monster.Length - 1) i++;
-            else Destroy(gameObject);  //더 이상 소환안되게 하는 장치
+            coin += coinRate;
+            text.text = string.Format("{0:#,#}", Mathf.Round(coin));
+
+            yield return new WaitForSeconds(1f);
+
         }
     }
-    public void Spawn()
+    IEnumerator Stop_timer()
     {
-        Instantiate(monster[i], transform.position, Quaternion.identity);
+        //만약에 게임이 종료되었을 경우 추가
+        StopCoroutine(co_timer());
+        yield return new WaitForSecondsRealtime(1f);
     }
 }
 

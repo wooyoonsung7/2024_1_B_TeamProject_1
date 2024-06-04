@@ -330,8 +330,8 @@ MonoBehaviour:
   bulletPf: {fileID: 5386366572833467239, guid: b048be30d55ed544eb2ef2e02ffb66d7, type: 3}
   damage: 1
   EnemyName: 
-  EnemyHp: 10
-  speed: 3
+  EnemyHp: 220
+  speed: 2
   target:
   - {fileID: 0}
   - {fileID: 0}
