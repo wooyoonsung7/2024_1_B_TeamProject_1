@@ -16,6 +16,5 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.forward * speed;
         Destroy(gameObject, 3f);
 
-        Debug.Log(attackValue);
     }
 }

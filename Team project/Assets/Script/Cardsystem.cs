@@ -45,15 +45,35 @@ public class Cardsystem : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void CardPointTower()
     {
-        if (gameObject == Cardlist[0]) _cardTowerPoint[0].SetActive(true); _cardTowerPointCake = true;
+        if (gameObject == Cardlist[0] && _cardTowerPoint[0].GetComponent<TowerController>().coinValue <= GameManager.Instance.coin)
+        {
+            _cardTowerPoint[0].SetActive(true); _cardTowerPointCake = true;
+            GameManager.Instance.coin -= _cardTowerPoint[0].GetComponent<TowerController>().coinValue;
+        }
 
-        if (gameObject == Cardlist[1]) _cardTowerPoint[1].SetActive(true); _cardTowerPointCake = true;
+        if (gameObject == Cardlist[1] && _cardTowerPoint[1].GetComponent<TowerController>().coinValue <= GameManager.Instance.coin)
+        {
+            _cardTowerPoint[1].SetActive(true); _cardTowerPointCake = true;
+            GameManager.Instance.coin -= _cardTowerPoint[1].GetComponent<TowerController>().coinValue;
+        }
 
-        if (gameObject == Cardlist[2]) _cardTowerPoint[2].SetActive(true); _cardTowerPointCake = true;
+        if (gameObject == Cardlist[2] && _cardTowerPoint[2].GetComponent<TowerController>().coinValue <= GameManager.Instance.coin) 
+        { 
+            _cardTowerPoint[2].SetActive(true); _cardTowerPointCake = true;
+            GameManager.Instance.coin -= _cardTowerPoint[2].GetComponent<TowerController>().coinValue;
+        }
 
-        if (gameObject == Cardlist[3]) _cardTowerPoint[3].SetActive(true); _cardTowerPointCake = true;
+        if (gameObject == Cardlist[3] && _cardTowerPoint[3].GetComponent<TowerController>().coinValue <= GameManager.Instance.coin)
+        {
+            _cardTowerPoint[3].SetActive(true); _cardTowerPointCake = true;
+            GameManager.Instance.coin -= _cardTowerPoint[3].GetComponent<TowerController>().coinValue;
+        }
 
-        if (gameObject == Cardlist[4]) _cardTowerPoint[4].SetActive(true); _cardTowerPointCake = true;
+        if (gameObject == Cardlist[4] && _cardTowerPoint[4].GetComponent<TowerController>().coinValue <= GameManager.Instance.coin)
+        {
+            _cardTowerPoint[4].SetActive(true); _cardTowerPointCake = true;
+            GameManager.Instance.coin -= _cardTowerPoint[4].GetComponent<TowerController>().coinValue;
+        }
 
     }
 
