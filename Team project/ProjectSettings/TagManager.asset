@@ -4,27 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Tile
-  - Tower
-  - Card01
-  - Card02
-  - Card03
-  - Card04
-  - Card05
-  - CardPont01
-  - CardPont02
-  - CardPont03
-  - Monster
-  - Bullet
+  - TowerBase
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Card
+  - 
   - Water
   - UI
-  - Enemy
+  - Ground
   - 
   - 
   - 
