@@ -12,12 +12,14 @@ public class SettingsMenu : MonoBehaviour
     public Button quitButton; // 나가기 버튼
     public Slider volumeSlider; // 음량 설정 슬라이더
     public GameObject settingsPanel; // 설정 메뉴 패널
+    public Slider HomeSlider;
 
 
     void Start()
     {
         // 슬라이더의 초기값을 저장된 값으로 설정하거나 기본값(1f)으로 설정
         volumeSlider.value = PlayerPrefs.GetFloat("volume", 1f);
+        HomeSlider.value = PlayerPrefs.GetFloat("volume", 2f);
 
         // 리스너 추가: 버튼 클릭이나 슬라이더 값 변경 시 호출될 함수를 등록
         continueButton.onClick.AddListener(ContinueGame); // continueButton 클릭 시 ContinueGame 함수 호출
