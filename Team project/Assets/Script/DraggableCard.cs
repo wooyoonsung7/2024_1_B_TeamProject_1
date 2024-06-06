@@ -43,10 +43,10 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         if (Physics.Raycast(ray, out hit))
         {
-            GameObject hitObject = hit.collider.gameObject;
-
-            // 감지된 3D 객체와 상호작용하는 로직
-            InteractWith3DObject(hitObject);
+            if(hit.collider.tag == "TowerBase")
+            {
+                InteractWith3DObject(hit.collider.gameObject);
+            }
         }
     }
 
