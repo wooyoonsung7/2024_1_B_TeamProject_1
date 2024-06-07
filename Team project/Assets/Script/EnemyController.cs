@@ -64,4 +64,18 @@ public class EnemyController : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "EndPoint")
+        {
+            Health health = other.GetComponent<Health>();
+            Debug.Log("Ãæµ¹");
+
+            if (health != null)
+            {
+                health.TakeDamage();
+            }
+        }
+    }
 }
