@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public float Hp = 10f;
     public float speed = 2.0f;
 
     private Transform[] wayPoints;
@@ -22,6 +23,7 @@ public class EnemyController : MonoBehaviour
         {
             MoveAlongPath();
         }
+        if (Hp == 0) Die();
     }
 
     void MoveAlongPath()
@@ -56,5 +58,10 @@ public class EnemyController : MonoBehaviour
     {
         Vector3 direction = (targetPosition - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
+    }
+
+    void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
