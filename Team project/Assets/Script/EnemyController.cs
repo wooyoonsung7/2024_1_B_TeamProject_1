@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 using System.Security.Cryptography;
+using System.Collections;
 
 public class EnemyController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class EnemyController : MonoBehaviour
     private Transform endPoint;
     private bool reachedEndPoint = false;
     private bool Hit = false;
+    float Timer = 0;
 
     void Start()
     {
@@ -24,6 +26,8 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        Timer += Time.deltaTime;
+
         if (!reachedEndPoint)
         {
             MoveAlongPath();
@@ -72,6 +76,15 @@ public class EnemyController : MonoBehaviour
         {
             OnDamage(other.gameObject);
             Destroy(other.gameObject);
+            if (!Hit && Timer >= 3.5f)
+            {
+                Hit = true;
+                Timer = 0;
+                transform.DOShakePosition(0.5f, 0.5f, 10, 90f, false);
+
+                DOVirtual.DelayedCall(0.5f, () => Hit = false);
+            }
+
         }
 
         else if (other.tag == "EndPoint")
@@ -91,14 +104,7 @@ public class EnemyController : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-
-        if (collision.gameObject.compareTag("Bullet") !Hit)
-        {
-            Hit = true;
-
-            transform.DOShakePosition(0.5f, 0.5f, 10, 90f, false);
-
-            DOVirtual.DelayedCall(0.5f, () => Hit = false);
-        }
+        
     }
+
 }

@@ -85,13 +85,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2957779561591621052, guid: bdb312167369e4c49a93462d1f66a881, type: 3}
   coinValue: 0
-  AttackInterval: 0.5
+  AttackInterval: 0.2
   halfSize: 5
   n_LayerMask:
     serializedVersion: 2
     m_Bits: 128
-  bulletSpeed: 10
-  attackValue: 2
+  bulletSpeed: 12
+  attackValue: 8
 --- !u!1001 &1970140320652711649
 PrefabInstance:
   m_ObjectHideFlags: 0

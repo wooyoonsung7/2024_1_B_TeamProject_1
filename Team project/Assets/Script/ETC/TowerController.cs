@@ -37,9 +37,12 @@ public class TowerController : MonoBehaviour
         {
             Transform _targetTf = _target[i].transform;
 
-            Vector3 Direction = (transform.position - _targetTf.position).normalized;
-            if (Direction.y < 180 && Direction.y > 0)
-                transform.DORotate(new Vector3(0, 180, 0), 1f);        
+            if (transform.position.z >= _targetTf.position.z && transform.position.x <= _targetTf.position.x + 1f && transform.position.x >= _targetTf.position.x - 1f) 
+                transform.DORotate(new Vector3(0, 180, 0), 1f);
+            if (transform.position.z <= _targetTf.position.z && transform.position.x <= _targetTf.position.x + 1f && transform.position.x >= _targetTf.position.x - 1f)
+                transform.DORotate(new Vector3(0, 0, 0), 1f);
+
+            //if (transform.position.x > _targetTf.position.x) transform.DORotate(new Vector3(0, 90, 0), 1f);
 
             if (_targetTf.tag == "Enemy")
             {
