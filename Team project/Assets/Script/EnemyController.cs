@@ -70,6 +70,15 @@ public class EnemyController : MonoBehaviour
             OnDamage(other.gameObject);
             Destroy(other.gameObject);
         }
+
+        else if (other.tag == "EndPoint")
+        {
+            Health health = other.GetComponent<Health>();   // Health스크립트를 받아옴
+            if (health != null)                             // 받아오는걸 성공했을 때
+            {
+                health.TakeDamage();                        // TakeDamage를 실행함
+            }
+        }
     }
     public void OnDamage(GameObject temp)
     {
@@ -81,6 +90,4 @@ public class EnemyController : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
-
 }

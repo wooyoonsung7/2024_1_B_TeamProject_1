@@ -53,17 +53,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage()
     {
-        //void OnTriggerEnter(Collider other)
+        currentHealth--;
+        if (currentHealth <= 0)
         {
-            //if (other.tag == "Enemy")
-            {
-                //Debug.Log("Ãæµ¹");
-                currentHealth--;
-                if (currentHealth <= 0)
-                {
-                    Gameover();
-                }
-            }
+            Gameover();
         }
     }
 
