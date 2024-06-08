@@ -1,6 +1,8 @@
 using System;
 using TMPro;
 using UnityEngine;
+using DG.Tweening;
+using System.Security.Cryptography;
 
 public class EnemyController : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class EnemyController : MonoBehaviour
     private int currentWayPointIndex = 0;
     private Transform endPoint;
     private bool reachedEndPoint = false;
+    private bool Hit = false;
 
     void Start()
     {
@@ -87,6 +90,15 @@ public class EnemyController : MonoBehaviour
         if (EnemyHp <= 0)
         {
             gameObject.SetActive(false);
+        }
+
+        if (collision.gameObject.compareTag("Bullet") !Hit)
+        {
+            Hit = true;
+
+            transform.DOShakePosition(0.5f, 0.5f, 10, 90f, false);
+
+            DOVirtual.DelayedCall(0.5f, () => Hit = false);
         }
     }
 }
