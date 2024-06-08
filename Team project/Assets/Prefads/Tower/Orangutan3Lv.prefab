@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4460639009624844655}
   - component: {fileID: -6118553599872920175}
   - component: {fileID: -3937920036219016920}
+  - component: {fileID: -8379629465947556848}
   m_Layer: 0
   m_Name: Orangutan3Lv
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,6 +71,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-8379629465947556848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3052624616211707637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b6b8aa10caf244ea449d54dc290a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7371014632387207887, guid: 7cdd2911ce90f28429d96592bf68a634, type: 3}
+  coinValue: 0
+  AttackInterval: 0.5
+  halfSize: 5
+  n_LayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  bulletSpeed: 10
+  attackValue: 2
 --- !u!1001 &5022687263263521317
 PrefabInstance:
   m_ObjectHideFlags: 0

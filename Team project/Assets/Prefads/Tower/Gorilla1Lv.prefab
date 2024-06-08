@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2981620423745309056}
   - component: {fileID: 4073827328171441917}
   - component: {fileID: -7201772323705312397}
+  - component: {fileID: -380097159108170339}
   m_Layer: 0
   m_Name: Gorilla1Lv
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 697886525571355994}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70,6 +71,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &-380097159108170339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697886525571355994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b6b8aa10caf244ea449d54dc290a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2957779561591621052, guid: bdb312167369e4c49a93462d1f66a881, type: 3}
+  coinValue: 0
+  AttackInterval: 0.5
+  halfSize: 5
+  n_LayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  bulletSpeed: 10
+  attackValue: 2
 --- !u!1001 &6016315770323686016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c0e4de7e3c45694dbc7d2a19a7bda21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c0e4de7e3c45694dbc7d2a19a7bda21, type: 3}
       propertyPath: m_LocalPosition.z

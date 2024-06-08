@@ -1,7 +1,10 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public int EnemyHp = 10;
     public float speed = 2.0f;
 
     private Transform[] wayPoints;
@@ -54,7 +57,30 @@ public class EnemyController : MonoBehaviour
 
     void MoveToPoint(Vector3 targetPosition)
     {
+        transform.LookAt(targetPosition);
         Vector3 direction = (targetPosition - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
     }
+
+    //생긴 것
+    private void OnTriggerEnter(Collider other) // 부딛힌 총알의 정보를 가져오는데 사용할 수 있음.
+    {
+        if (other.tag == "Bullet")
+        {
+            OnDamage(other.gameObject);
+            Destroy(other.gameObject);
+        }
+    }
+    public void OnDamage(GameObject temp)
+    {
+        EnemyHp -= temp.GetComponent<Bullet>().attackValue;
+        Debug.Log(EnemyHp); 
+
+        if (EnemyHp <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 }

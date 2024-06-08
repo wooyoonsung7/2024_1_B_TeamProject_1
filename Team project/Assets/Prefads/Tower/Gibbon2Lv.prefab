@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 721078134707643576}
   - component: {fileID: 9040666552122345579}
   - component: {fileID: 2451641064267937617}
+  - component: {fileID: 2455350252782616854}
   m_Layer: 0
   m_Name: Gibbon2Lv
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1914064224028764569}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70,6 +71,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &2455350252782616854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914064224028764569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b6b8aa10caf244ea449d54dc290a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7371014632387207887, guid: 7cdd2911ce90f28429d96592bf68a634, type: 3}
+  coinValue: 0
+  AttackInterval: 0.5
+  halfSize: 5
+  n_LayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  bulletSpeed: 10
+  attackValue: 2
 --- !u!1001 &5070975046744862889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ad8d6bcc4b052b45b8f3e98d8517fcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ad8d6bcc4b052b45b8f3e98d8517fcd, type: 3}
       propertyPath: m_LocalPosition.z

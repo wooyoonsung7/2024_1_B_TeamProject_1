@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 712739903801192763}
   - component: {fileID: 2922070707676449040}
   - component: {fileID: -6829716488596604651}
+  - component: {fileID: -3999929993886577815}
   m_Layer: 0
   m_Name: Monkey3Lv
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,6 +71,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &-3999929993886577815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3443809723611953986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b6b8aa10caf244ea449d54dc290a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6111484609971715238, guid: 85090b79f2a069b429754692a4357106, type: 3}
+  coinValue: 0
+  AttackInterval: 0.5
+  halfSize: 5
+  n_LayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  bulletSpeed: 10
+  attackValue: 2
 --- !u!1001 &3443345237610821424
 PrefabInstance:
   m_ObjectHideFlags: 0
