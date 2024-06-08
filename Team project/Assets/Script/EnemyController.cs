@@ -78,7 +78,7 @@ public class EnemyController : MonoBehaviour
 
         if (EnemyHp <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
