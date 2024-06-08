@@ -36,6 +36,11 @@ public class TowerController : MonoBehaviour
         for (int i = 0; i < _target.Length; i++)
         {
             Transform _targetTf = _target[i].transform;
+
+            Vector3 Direction = (transform.position - _targetTf.position).normalized;
+            if (Direction.y < 180 && Direction.y > 0)
+                transform.DORotate(new Vector3(0, 180, 0), 1f);        
+
             if (_targetTf.tag == "Enemy")
             {
                 if (AttackTimer >= AttackInterval)

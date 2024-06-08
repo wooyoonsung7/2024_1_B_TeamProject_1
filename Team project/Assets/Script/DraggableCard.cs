@@ -8,6 +8,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private CanvasGroup canvasGroup;
     private Vector2 originalPosition;
     public int cardIndex = 0;
+    public int CoinValue = 0;  //코인값지정
 
     private void Awake()
     {
@@ -52,7 +53,15 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private void InteractWith3DObject(GameObject obj)
     {
-        GameObject gameObject = Instantiate(GameManager.Instance.TowerArray[cardIndex].columns[0]);
-        gameObject.transform.position = obj.transform.position;
+        if (CoinSystem.Instance.coin >= CoinValue)
+        {
+            CoinSystem.Instance.coin -= CoinValue;
+            GameObject gameObject = Instantiate(GameManager.Instance.TowerArray[cardIndex].columns[0]);
+            gameObject.transform.position = obj.transform.position;
+        }
+        else
+        {
+            //사운드로 배치가 안된다는 정보전달
+        }
     }
 }

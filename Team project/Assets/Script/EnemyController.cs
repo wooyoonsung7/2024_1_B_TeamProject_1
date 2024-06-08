@@ -83,7 +83,6 @@ public class EnemyController : MonoBehaviour
     public void OnDamage(GameObject temp)
     {
         EnemyHp -= temp.GetComponent<Bullet>().attackValue;
-        Debug.Log(EnemyHp); 
 
         if (EnemyHp <= 0)
         {
