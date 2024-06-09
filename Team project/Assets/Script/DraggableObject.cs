@@ -1,4 +1,5 @@
 using System.Diagnostics.Tracing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DraggableObject : MonoBehaviour
@@ -14,10 +15,14 @@ public class DraggableObject : MonoBehaviour
 
     private void Awake()
     {
-        if (Bulletinstance == null)
+        while (true)
         {
-            Bulletinstance = this;
-            DontDestroyOnLoad(gameObject);
+            if (Bulletinstance == null)
+            {
+                Bulletinstance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            break;
         }
     }
     private void Start()
