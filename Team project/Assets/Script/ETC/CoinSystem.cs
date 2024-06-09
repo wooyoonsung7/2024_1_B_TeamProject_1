@@ -11,13 +11,20 @@ public class CoinSystem : MonoBehaviour
     public float coin = 20;                                      //초기 지원자금
     public float coinRate = 3f;                                  //코인 증가비율
 
+    Coroutine co_Coin;
+
     private void Awake()
     {
         Instance = this;
     }
     void Start()
     {
-        StartCoroutine(co_timer());
+       co_Coin = StartCoroutine(co_timer());
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.F)) Time.timeScale = 2f;  //F키를 누를 경우, 게임진행속도를 높인다.
+        else Time.timeScale = 1.0f;
     }
 
     IEnumerator co_timer()
@@ -31,11 +38,15 @@ public class CoinSystem : MonoBehaviour
 
         }
     }
+
+    public  void EndCoin()
+    {
+        StartCoroutine (Stop_timer());
+    }
     IEnumerator Stop_timer()
     {
-        //만약에 게임이 종료되었을 경우 추가
-        StopCoroutine(co_timer());
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0.5f);
+        StopCoroutine(co_Coin);
     }
 }
 

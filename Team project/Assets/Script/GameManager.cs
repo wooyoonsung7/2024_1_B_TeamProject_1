@@ -169,11 +169,11 @@ public class GameManager : MonoBehaviour
     {
         if (stateTimer <= 0.0f)
         {
-            
+            CoinSystem.Instance.EndCoin();
         }
     }
 
-    public void AddCoins(int amount)
+    /*public void AddCoins(int amount)
     {
         coin += amount;
         Debug.Log("Coins added: " + amount + ". Total coins: " + coin);
@@ -190,7 +190,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Not enough coins to spend!");
         }
-    }
+    }*/
 
 
 }

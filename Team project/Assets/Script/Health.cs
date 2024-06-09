@@ -11,10 +11,12 @@ public class Health : MonoBehaviour
     public Image[] hearts;  // 하트 이미지 배열 최대 체력이 5라면 5
     public Sprite fullHeart;  // 채워진 하트 스프라이트
     public Sprite emptyHeart; // 빈 하트 스프라이트
+    GameManager gamemanager;
 
     void Start()
     {
         currentHealth = health;
+        gamemanager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -63,6 +65,8 @@ public class Health : MonoBehaviour
     void Gameover()
     {
         Debug.Log("게임 오버");
+        gamemanager.gameObject.SetActive(false);
+        CoinSystem.Instance.EndCoin();
         // 게임 오버 UI 키는거 작성해야함
         // 게임 오버했을 때 현재 게임을 일시정지하는거 어떻게 하지?
     }

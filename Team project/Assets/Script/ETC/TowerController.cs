@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using DG.Tweening;
 using DG.Tweening.Core.Easing;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class TowerController : MonoBehaviour
     public float bulletSpeed = 1;          //총알이동속도
     public int attackValue = 1;            //총알공격력
 
+    float movetimer;
+
     void Start()
     {
         AttackTimer = 0;
@@ -25,6 +28,7 @@ public class TowerController : MonoBehaviour
     private void FixedUpdate()
     {
         SearchEnemy();
+        movetimer += Time.deltaTime;
     }
 
     void SearchEnemy()
@@ -37,12 +41,7 @@ public class TowerController : MonoBehaviour
         {
             Transform _targetTf = _target[i].transform;
 
-            if (transform.position.z >= _targetTf.position.z && transform.position.x <= _targetTf.position.x + 1f && transform.position.x >= _targetTf.position.x - 1f) 
-                transform.DORotate(new Vector3(0, 180, 0), 1f);
-            if (transform.position.z <= _targetTf.position.z && transform.position.x <= _targetTf.position.x + 1f && transform.position.x >= _targetTf.position.x - 1f)
-                transform.DORotate(new Vector3(0, 0, 0), 1f);
-
-            //if (transform.position.x > _targetTf.position.x) transform.DORotate(new Vector3(0, 90, 0), 1f);
+            LookEnemy(_targetTf);
 
             if (_targetTf.tag == "Enemy")
             {
@@ -57,10 +56,44 @@ public class TowerController : MonoBehaviour
             }
         }
     }
+
+    private void LookEnemy(Transform targetTf)
+    {
+        int a = 5;
+        if (movetimer >= GameManager.Instance.stageWaveData.SpawnTimer + 1f)
+        {
+            if (transform.position.z <= targetTf.position.z && transform.position.x <= targetTf.position.x + 0.3f && transform.position.x >= targetTf.position.x - 0.3f)
+                a = 0;
+            if (transform.position.z > targetTf.position.z && transform.position.x <= targetTf.position.x + 0.3f && transform.position.x >= targetTf.position.x - 0.3f)
+                a = 1;
+            if (transform.position.x <= targetTf.position.x && transform.position.z <= targetTf.position.z + 0.3f && transform.position.z >= targetTf.position.z - 0.3f)
+                a = 2;
+            if (transform.position.x > targetTf.position.x && transform.position.z <= targetTf.position.z + 0.3f && transform.position.z >= targetTf.position.z - 0.3f)
+                a = 3;
+        }
+
+        switch (a)
+        {
+            case 0:
+                transform.DORotate(new Vector3(0, 0, 0), 1f); movetimer = 0;
+                break;
+            case 1:
+                transform.DORotate(new Vector3(0, 180, 0), 1f); movetimer = 0;
+                break;
+            case 2:
+                transform.DORotate(new Vector3(0, 90, 0), 1f); movetimer = 0;
+                Debug.Log("된다");
+                break;
+            case 3:
+                transform.DORotate(new Vector3(0, 270, 0), 1f); movetimer = 0;
+                break;
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(gameObject.transform.position, halfSize);
     }
+
 }
 
