@@ -14,18 +14,5 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.forward * speed;
         Destroy(gameObject, 3f);
-
-    }
-
-    private void Update()
-    {
-        if (DraggableObject.Bulletinstance.isDragging == true)
-        {
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            gameObject.SetActive(true);
-        }
     }
 }

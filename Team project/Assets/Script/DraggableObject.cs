@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DraggableObject : MonoBehaviour
 {
-    public static DraggableObject Bulletinstance;
     private Vector3 offset;
     private Camera mainCamera;
     public bool isDragging;
@@ -13,18 +12,6 @@ public class DraggableObject : MonoBehaviour
     public int arrayIndex;
     public int objectLevel;
 
-    private void Awake()
-    {
-        while (true)
-        {
-            if (Bulletinstance == null)
-            {
-                Bulletinstance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            break;
-        }
-    }
     private void Start()
     {
         mainCamera = Camera.main;

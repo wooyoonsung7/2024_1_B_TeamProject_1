@@ -18,17 +18,25 @@ public class TowerController : MonoBehaviour
     public float bulletSpeed = 1;          //총알이동속도
     public int attackValue = 1;            //총알공격력
 
+    public DraggableObject draggableObject;
+
     float movetimer;
+
+    public bool isBuild = false;
 
     void Start()
     {
         AttackTimer = 0;
+        draggableObject = GetComponent<DraggableObject>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        SearchEnemy();
-        movetimer += Time.deltaTime;
+        if(!draggableObject.isDragging)
+        {
+            SearchEnemy();
+            movetimer += Time.deltaTime;
+        }        
     }
 
     void SearchEnemy()

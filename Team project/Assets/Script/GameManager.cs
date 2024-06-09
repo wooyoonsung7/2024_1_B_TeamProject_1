@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static GameManager;
 
 [System.Serializable]
 public class TowerData
@@ -37,7 +36,10 @@ public class GameManager : MonoBehaviour
     }
 
     public TowerData[] TowerArray = new TowerData[5];
+
     public int coin;
+    public float coinTimer;
+
     public GAMESTATE gamestate;
 
     void Awake()
@@ -123,10 +125,16 @@ public class GameManager : MonoBehaviour
 
     public void DoWave()
     {
-
         spawnTimer += Time.deltaTime;
+        coinTimer += Time.deltaTime;
 
-        if(spawnTimer >= stageWaveData.SpawnTimer && !isWaveDone && !isAllWaveDone)
+        if (coinTimer >= 1.0f)
+        {
+            coin += 3;
+            coinTimer = 0.0f;
+        }
+
+        if (spawnTimer >= stageWaveData.SpawnTimer && !isWaveDone && !isAllWaveDone)
         {
             GameObject temp = stageWaveData.waveRound[stageWaveCursor].columns[stageWaveMenberCursor[stageWaveCursor]];
             stageWaveMenberCursor[stageWaveCursor] += 1;
@@ -145,7 +153,7 @@ public class GameManager : MonoBehaviour
                 isAllWaveDone = true;
             }
             spawnTimer = 0.0f;   
-        }
+        }      
 
         if (stateTimer <= 0.0f)
         {
@@ -172,25 +180,5 @@ public class GameManager : MonoBehaviour
             CoinSystem.Instance.EndCoin();
         }
     }
-
-    /*public void AddCoins(int amount)
-    {
-        coin += amount;
-        Debug.Log("Coins added: " + amount + ". Total coins: " + coin);
-    }
-
-    public void SpendCoins(int amount)
-    {
-        if (coin >= amount)
-        {
-            coin -= amount;
-            Debug.Log("Coins spent: " + amount + ". Total coins: " + coin);
-        }
-        else
-        {
-            Debug.Log("Not enough coins to spend!");
-        }
-    }*/
-
 
 }

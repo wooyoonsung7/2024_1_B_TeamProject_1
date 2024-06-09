@@ -1,3 +1,4 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -53,9 +54,9 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private void InteractWith3DObject(GameObject obj)
     {
-        if (CoinSystem.Instance.coin >= CoinValue)
+        if (GameManager.Instance.coin >= CoinValue)
         {
-            CoinSystem.Instance.coin -= CoinValue;
+            GameManager.Instance.coin -= CoinValue;
             GameObject gameObject = Instantiate(GameManager.Instance.TowerArray[cardIndex].columns[0]);
             gameObject.transform.position = obj.transform.position;
         }
