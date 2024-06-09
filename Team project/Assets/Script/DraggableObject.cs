@@ -3,23 +3,31 @@ using UnityEngine;
 
 public class DraggableObject : MonoBehaviour
 {
-
+    public static DraggableObject instance;
     private Vector3 offset;
     private Camera mainCamera;
-    private bool isDragging;
+    public bool isDragging;
     private Vector3 originalPosition;
     public int objectIndex;
     public int arrayIndex;
     public int objectLevel;
 
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         mainCamera = Camera.main;
-    }
-
-    private void Update()
-    {
-        BulletchekingPoint();
     }
 
     private void OnMouseDown()
@@ -93,13 +101,5 @@ public class DraggableObject : MonoBehaviour
             return true; // 합체가 성공했음을 알림
         }
         return false; // 합체가 실패했음을 알림
-    }
-
-    void BulletchekingPoint()
-    {
-        if (isDragging == true)
-        {
-            Bullet._instance.Bulletcheking();
-        }
     }
 }
