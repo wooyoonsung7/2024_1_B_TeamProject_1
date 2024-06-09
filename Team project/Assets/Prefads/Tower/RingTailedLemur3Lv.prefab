@@ -90,7 +90,7 @@ MonoBehaviour:
   n_LayerMask:
     serializedVersion: 2
     m_Bits: 128
-  bulletSpeed: 12
+  bulletSpeed: 14
   attackValue: 8
 --- !u!1001 &1970140320652711649
 PrefabInstance:
