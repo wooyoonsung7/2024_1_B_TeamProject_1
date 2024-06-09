@@ -5,23 +5,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-  public static Bullet _instance;
     public float speed = 1;
     Rigidbody rb;
     public int attackValue;
-
-
-    private void Awake()
-    {
-        if(_instance!= null)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
 
     private void Start()
     {
@@ -31,10 +17,15 @@ public class Bullet : MonoBehaviour
 
     }
 
-    public void Bulletcheking()
+    private void Update()
     {
-        Destroy(gameObject);
+        if (DraggableObject.Bulletinstance.isDragging == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
-
-
 }
