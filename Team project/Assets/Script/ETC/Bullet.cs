@@ -19,11 +19,11 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        if(DraggableObject.instance.isDragging == true)
+        if (DraggableObject.Bulletinstance.isDragging == true)
         {
             gameObject.SetActive(false);
         }
-        else 
+        else
         {
             gameObject.SetActive(true);
         }

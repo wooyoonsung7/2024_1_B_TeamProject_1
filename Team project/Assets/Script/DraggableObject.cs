@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DraggableObject : MonoBehaviour
 {
-    public static DraggableObject instance;
+    public static DraggableObject Bulletinstance;
     private Vector3 offset;
     private Camera mainCamera;
     public bool isDragging;
@@ -14,17 +14,12 @@ public class DraggableObject : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if (Bulletinstance == null)
         {
-            instance = this;
+            Bulletinstance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
-
     private void Start()
     {
         mainCamera = Camera.main;
