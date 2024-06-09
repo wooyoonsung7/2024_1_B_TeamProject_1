@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public Button continueButton; // 게임 계속하기 버튼
-    public Button quitButton;
     public GameObject settingsPanel;
+    public Button continueButton; // 게임 계속하기 버튼
     public Button restartButton;
     public Button mainMenuButton;
+    public Button quitButton;
+    public bool isPaused = false;
 
     void Start()
     {
@@ -21,7 +22,7 @@ public class SettingsMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (settingsPanel.activeSelf)
+            if (settingsPanel.activeSelf)   // 메뉴가 열려있으면
             {
                 CloseSettingsMenu();
             }
@@ -31,28 +32,25 @@ public class SettingsMenu : MonoBehaviour
             }
         }
     }
+
     public void OpenSettingsMenu()
     {
         settingsPanel.SetActive(true);
         Time.timeScale = 0f; // 게임 일시 정지
+        isPaused = true;
     }
 
     public void CloseSettingsMenu()
     {
         settingsPanel.SetActive(false);
         Time.timeScale = 1f; // 게임 재개
+        isPaused = false;
     }
 
     public void ContinueGame()
     {
         // 설정 메뉴를 비활성화하고 게임을 재개
         CloseSettingsMenu();
-    }
-
-    public void QuitGame()
-    {
-        // 게임 종료
-        Application.Quit();
     }
 
     public void RestartGame()
@@ -67,5 +65,11 @@ public class SettingsMenu : MonoBehaviour
         // 메인 메뉴로 이동
         Time.timeScale = 1f; // 게임 시간 재개
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void QuitGame()
+    {
+        // 게임 종료
+        Application.Quit();
     }
 }
