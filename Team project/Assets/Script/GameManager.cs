@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
 
 [System.Serializable]
 public class TowerData
@@ -43,7 +44,9 @@ public class GameManager : MonoBehaviour
     public TowerData[] TowerArray = new TowerData[5];
 
     public int coin;
-    public float coinTimer;
+    float coinTimer;
+    public Text text;
+    bool isBuy = false;
 
     public GAMESTATE gamestate;
 
@@ -59,11 +62,18 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1.0f;      // 게임 오버, 클리어 시 timeScale=0 된 것을 풀기 위해서 시작할 때 다시 timeScale을 1.0으로 초기화.
         // 돌아가긴 하는데 뭔가 timeScale로 이렇게 하면 안 될 것 같음 근데 어떻게 해야할지 모르겠어요
         WaveDataInit();
+
+        coinTimer = 1.0f;  //코인시스템
+        coin = 20;
     }
 
      void Update()
     {
         stateTimer -= Time.deltaTime;
+        coinTimer -= Time.deltaTime;
+
+        Coin(coinTimer);
+        text.text = string.Format("{0:#,#}", coin);
 
         switch (gamestate)
         {
@@ -155,13 +165,7 @@ public class GameManager : MonoBehaviour
     public void DoWave()
     {
         spawnTimer += Time.deltaTime;
-        coinTimer += Time.deltaTime;
 
-        if (coinTimer >= 1.0f)
-        {
-            coin += 3;
-            coinTimer = 0.0f;
-        }
 
         if (spawnTimer >= stageWaveData.SpawnTimer && !isWaveDone && !isAllWaveDone)
         {
@@ -214,7 +218,25 @@ public class GameManager : MonoBehaviour
     {
         if (stateTimer <= 0.0f)
         {
-            CoinSystem.Instance.EndCoin();
+
+        }
+    }
+    void Coin(float Timer)
+    {
+        if (Timer <= 0.0f && isBuy == false)
+        {
+            coin += 3;
+            coinTimer = 1f;
+        }
+
+    }
+    public void BuyCard(int cardValue)
+    {
+        isBuy = true;
+        if (isBuy == true)
+        {
+            coin -= cardValue;
+            isBuy = false;
         }
     }
 
