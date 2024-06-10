@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
 
 [System.Serializable]
 public class TowerData
@@ -43,7 +44,9 @@ public class GameManager : MonoBehaviour
     public TowerData[] TowerArray = new TowerData[5];
 
     public int coin;
-    public float coinTimer;
+    float coinTimer;
+    public Text text;
+    bool isBuy = false;
 
     public GAMESTATE gamestate;
 
@@ -57,11 +60,18 @@ public class GameManager : MonoBehaviour
         gamestate = GAMESTATE.GAMESTART;
         stateTimer = 1.0f;
         WaveDataInit();
+
+        coinTimer = 1.0f;  //코인시스템
+        coin = 20;
     }
 
      void Update()
     {
         stateTimer -= Time.deltaTime;
+        coinTimer -= Time.deltaTime;
+
+        Coin(coinTimer);
+        text.text = string.Format("{0:#,#}", coin);
 
         switch (gamestate)
         {
@@ -151,13 +161,7 @@ public class GameManager : MonoBehaviour
     public void DoWave()
     {
         spawnTimer += Time.deltaTime;
-        coinTimer += Time.deltaTime;
 
-        if (coinTimer >= 1.0f)
-        {
-            coin += 3;
-            coinTimer = 0.0f;
-        }
 
         if (spawnTimer >= stageWaveData.SpawnTimer && !isWaveDone && !isAllWaveDone)
         {
@@ -207,7 +211,25 @@ public class GameManager : MonoBehaviour
     {
         if (stateTimer <= 0.0f)
         {
-            CoinSystem.Instance.EndCoin();
+
+        }
+    }
+    void Coin(float Timer)
+    {
+        if (Timer <= 0.0f && isBuy == false)
+        {
+            coin += 3;
+            coinTimer = 1f;
+        }
+
+    }
+    public void BuyCard(int cardValue)
+    {
+        isBuy = true;
+        if (isBuy == true)
+        {
+            coin -= cardValue;
+            isBuy = false;
         }
     }
 

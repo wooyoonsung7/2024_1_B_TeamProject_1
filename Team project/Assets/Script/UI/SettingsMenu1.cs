@@ -12,6 +12,7 @@ public class SettingsMenu1 : MonoBehaviour
     public Button mainMenuButton;
     public Button quitButton;
     public bool Paused = false;
+    bool isquick = false;
 
     void Start()
     {
@@ -20,6 +21,17 @@ public class SettingsMenu1 : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.F))
+        {
+            isquick = true;
+            Time.timeScale = 2f;
+        }
+        else if(isquick == true)
+{
+            Time.timeScale = 1f;
+            isquick = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Paused == true)
