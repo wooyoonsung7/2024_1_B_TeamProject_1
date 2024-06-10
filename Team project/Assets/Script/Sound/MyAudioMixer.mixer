@@ -53,7 +53,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NewAudioMixer
+  m_Name: MyAudioMixer
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -64,10 +64,16 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: da67555b76ac85c41ac369e63d1f7043
+    name: BGM
+  - guid: a1b6cbe98cf979c49bf0d86dbed52e89
     name: MyExposedParam 1
   - guid: aa3fe449e9d1242429a4ec5e90697f9a
+    name: Master
+  - guid: 153972e109f712947b41501f42e5b836
     name: MyExposedParam
   - guid: 00dc8dddacd7f70408e9d4f7b1507e7d
+    name: SFX
+  - guid: 2c9563fbbf8e6ee498995aa8bdf95fd8
     name: MyExposedParam 2
   m_AudioMixerGroupViews:
   - guids:
