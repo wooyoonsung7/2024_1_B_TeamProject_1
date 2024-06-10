@@ -22,7 +22,7 @@ public class SettingsMenu1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (settingsPanel.activeSelf)   // 메뉴가 열려있으면
+            if (Paused == true)
             {
                 CloseSettingsMenu();
             }
@@ -31,6 +31,8 @@ public class SettingsMenu1 : MonoBehaviour
                 OpenSettingsMenu();
             }
         }
+
+        //Debug.Log(Time.timeScale);
     }
 
     public void OpenSettingsMenu()

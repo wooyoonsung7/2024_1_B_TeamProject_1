@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class Health : MonoBehaviour
     void Update()
     {
         Updatehealth();
+        
+        /*if (currentHealth <= 0)
+        {
+            Gameover();
+        }*/
     }
 
     void Updatehealth()     // 하트를 그려주는 함수
@@ -63,11 +69,20 @@ public class Health : MonoBehaviour
         }
     }
 
+    void GameClear()
+    {
+        PauseGame();
+        // 스테이지 클리어 UI 띄워줌
+        // 확인 버튼을 누르거나 일정 시간이 지나면 아래 코드가 실행되도록
+        //UnlockNewStage();                             // 선택 씬 해금
+        //SceneManager.LoadScene("StageSelection");     // 스테이지 선택 씬 로드
+    }
+
     void Gameover()
     {
         Debug.Log("게임 오버");
         gamemanager.gameObject.SetActive(false);
-        CoinSystem.Instance.EndCoin();
+        //CoinSystem.Instance.EndCoin();
       
         PauseGame();
 
@@ -80,5 +95,15 @@ public class Health : MonoBehaviour
     void PauseGame()
     {
         Time.timeScale = 0f; // 게임을 일시정지
+    }
+
+    void UnlockNewStage()   // 스테이지 진행도에 따라 스테이지 선택화면에서 unlock 하는 함수 | 실행되면 buildIndex + 1을 잠금해제 하므로 클리어 조건에 넣어야함
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedStage", PlayerPrefs.GetInt("UnlockedStage", 1) + 1);
+            PlayerPrefs.Save();
+        }
     }
 }

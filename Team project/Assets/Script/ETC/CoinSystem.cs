@@ -23,8 +23,7 @@ public class CoinSystem : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.F)) Time.timeScale = 2f;  //F키를 누를 경우, 게임진행속도를 높인다.
-        else Time.timeScale = 1.0f;
+
     }
 
     IEnumerator co_timer()
