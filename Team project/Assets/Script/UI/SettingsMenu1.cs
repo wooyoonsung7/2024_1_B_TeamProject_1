@@ -49,11 +49,12 @@ public class SettingsMenu1 : MonoBehaviour
         Paused = false;
     }
 
-    public void ContinueGame()
+    /*public void ContinueGame()
     {
         // 설정 메뉴를 비활성화하고 게임을 재개
         CloseSettingsMenu();
-    }
+    }*/
+    // 어짜피 CloseSettingsMenu() 와 기능이 똑같을텐데 뭐하러 함수를 또 만든거지? 이름 붙이려고? 일단 주석처리 해둠
 
     public void RestartGame()
     {

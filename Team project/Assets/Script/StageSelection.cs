@@ -52,15 +52,4 @@ public class StageSelection : MonoBehaviour
         string stageName = "Stage " + stageNum;
         SceneManager.LoadScene(stageName);
     }
-
-    // 이 아래부터는 메인화면에서 쓰이는 함수임
-    public void OnClickStart()
-    {
-        SceneManager.LoadScene("StageSelection");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 }

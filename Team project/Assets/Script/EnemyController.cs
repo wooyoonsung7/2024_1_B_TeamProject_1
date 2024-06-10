@@ -68,7 +68,6 @@ public class EnemyController : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
     }
 
-    //생긴 것
     private void OnTriggerEnter(Collider other) // 부딛힌 총알의 정보를 가져오는데 사용할 수 있음.
     {
         if (other.tag == "Bullet")
@@ -86,12 +85,22 @@ public class EnemyController : MonoBehaviour
 
         }
 
-        else if (other.tag == "EndPoint")
+        else if (other.tag == "EndPoint")       // Enemy가 끝까지 도착하면 HP를 깎음
         {
-            Health health = other.GetComponent<Health>();   // Health스크립트를 받아옴
-            if (health != null)                             // 받아오는걸 성공했을 때
+            Health health = FindObjectOfType<Health>();
+            if (health != null)
             {
-                health.TakeDamage();                        // TakeDamage를 실행함
+                int currentHealth = health.currentHealth;
+                currentHealth--;
+                if (currentHealth <= 0)
+                {
+                    GameManager gameManager = FindObjectOfType<GameManager>();
+                    if (gameManager != null)
+                    {
+                        gameManager.Gameover();
+                    }
+                    // 참조랑 if문 너무 많은데 이게 맞나;;
+                }
             }
         }
     }

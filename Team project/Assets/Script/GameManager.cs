@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
     {
         gamestate = GAMESTATE.GAMESTART;
         stateTimer = 1.0f;
+        Time.timeScale = 1.0f;      // 게임 오버, 클리어 시 timeScale=0 된 것을 풀기 위해서 시작할 때 다시 timeScale을 1.0으로 초기화.
+        // 돌아가긴 하는데 뭔가 timeScale로 이렇게 하면 안 될 것 같음 근데 어떻게 해야할지 모르겠어요
         WaveDataInit();
     }
 
@@ -92,13 +94,15 @@ public class GameManager : MonoBehaviour
 
     public void WaveDataInit()
     {
-        stageWaveCount = stageWaveData.waveRound.Length;
-        stageWaveMenberMax = new int[stageWaveCount];
-        stageWaveMenberCursor = new int[stageWaveCount];
+        stageWaveCount = stageWaveData.waveRound.Length;    // 계속 받아오기 번거로우니까 stageWaveCount에 할당
+        stageWaveMenberMax = new int[stageWaveCount];       // stageWaveCount만큼의 int형 배열 선언
+        stageWaveMenberCursor = new int[stageWaveCount];    // stageWaveCount만큼의 int형 배열 선언
 
         for (int i = 0; i < stageWaveCount; i++)
         {
             stageWaveMenberMax[i] = stageWaveData.waveRound[i].columns.Length;
+            // int 0. 즉, 첫 번째 웨이브일 때 첫 번째 웨이브의 몬스터 배열 길이 (몬스터 수)를 받아와서 stageWaveMenberMax[0]에 저장.
+            // 이런식으로 웨이브 수 만큼 반복하여 각각의 웨이브에 몬스터가 몇 마리 나올 것인지 stageWaveMenberMax 배열에 받아옴
         }
     }
 
@@ -162,10 +166,13 @@ public class GameManager : MonoBehaviour
         if (spawnTimer >= stageWaveData.SpawnTimer && !isWaveDone && !isAllWaveDone)
         {
             GameObject temp = stageWaveData.waveRound[stageWaveCursor].columns[stageWaveMenberCursor[stageWaveCursor]];
+            // stageWaveCursor는 0이므로 0번째 웨이브의 0번째 몬스터를 temp에 받아옴
             stageWaveMenberCursor[stageWaveCursor] += 1;
+            // stageWaveMenberCursor int 배열의 0번째에 1을 증가 시킴 (= 소환된 몬스터 수. 배열의 순서는 웨이브 순서)
             Instantiate(temp, StageManager.Instance.startPoint.position, Quaternion.identity);
+            // 받아온 temp 몬스터를 소환
 
-            if(stageWaveMenberCursor[stageWaveCursor] >= stageWaveMenberMax[stageWaveCursor])
+            if (stageWaveMenberCursor[stageWaveCursor] >= stageWaveMenberMax[stageWaveCursor])  // 소환된 몬스터 수(stageWaveMenberCursor)가 소환될 몬스터 수(stageWaveMenberMax)보다 크거나 같으면 초기화하고 다음 웨이브로 넘어감
             {
                 stageWaveMenberCursor[stageWaveCursor] = 0;
                 stageWaveCursor += 1;               
