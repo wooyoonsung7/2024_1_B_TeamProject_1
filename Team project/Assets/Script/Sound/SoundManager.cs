@@ -8,6 +8,8 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
     public List<Sound> sounds = new List<Sound>();
     public AudioMixer audioMixer;
+
+
     public void Awake()
     {
         if (instance == null)
