@@ -12,23 +12,16 @@ public class Health : MonoBehaviour
     public Image[] hearts;  // 하트 이미지 배열 최대 체력이 5라면 5
     public Sprite fullHeart;  // 채워진 하트 스프라이트
     public Sprite emptyHeart; // 빈 하트 스프라이트
-    GameManager gamemanager;
-    public GameObject gameOverUI;
+
 
     void Start()
     {
         currentHealth = health;
-        gamemanager = FindObjectOfType<GameManager>();
     }
 
     void Update()
     {
         Updatehealth();
-        
-        /*if (currentHealth <= 0)
-        {
-            Gameover();
-        }*/
     }
 
     void Updatehealth()     // 하트를 그려주는 함수
@@ -60,41 +53,14 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage()    // 이거 엔드포인트에 넣을 함수로 이동할거임
     {
         currentHealth--;
         if (currentHealth <= 0)
         {
-            Gameover();
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            gameManager.Gameover();
         }
-    }
-
-    void GameClear()
-    {
-        PauseGame();
-        // 스테이지 클리어 UI 띄워줌
-        // 확인 버튼을 누르거나 일정 시간이 지나면 아래 코드가 실행되도록
-        //UnlockNewStage();                             // 선택 씬 해금
-        //SceneManager.LoadScene("StageSelection");     // 스테이지 선택 씬 로드
-    }
-
-    void Gameover()
-    {
-        Debug.Log("게임 오버");
-        gamemanager.gameObject.SetActive(false);
-        //CoinSystem.Instance.EndCoin();
-      
-        PauseGame();
-
-        if (gameOverUI != null)
-        {
-            gameOverUI.SetActive(true);
-        }
-    }
-
-    void PauseGame()
-    {
-        Time.timeScale = 0f; // 게임을 일시정지
     }
 
     void UnlockNewStage()   // 스테이지 진행도에 따라 스테이지 선택화면에서 unlock 하는 함수 | 실행되면 buildIndex + 1을 잠금해제 하므로 클리어 조건에 넣어야함

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class TowerData
@@ -24,6 +26,9 @@ public class GameManager : MonoBehaviour
 
     public int stageWaveCursor;
     public int[] stageWaveMenberCursor;
+
+    public GameObject gameClearUI;
+    public GameObject gameOverUI;
 
     public enum GAMESTATE
     {
@@ -113,6 +118,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void GameClear()        // 게임 클리어 조건안에서 호출할 함수
+    {
+        PauseGame();
+        // 스테이지 클리어 UI 띄워줌
+        // 확인 버튼을 누르거나 일정 시간이 지나면 아래 코드가 실행되도록
+        //UnlockNewStage();                             // 선택 씬 해금
+        //SceneManager.LoadScene("StageSelection");     // 스테이지 선택 씬 로드
+    }
+
+    public void Gameover()
+    {
+        Debug.Log("게임 오버");
+        PauseGame();
+
+        /*if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(true);
+        }*/
+    }
+
     public void WaveStart()
     {
         if (stateTimer <= 0.0f)
@@ -171,6 +196,11 @@ public class GameManager : MonoBehaviour
         {
             ChangeGameState(GAMESTATE.WAVESTART, 1);
         }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f; // 게임을 일시정지
     }
 
     public void EndGame()
