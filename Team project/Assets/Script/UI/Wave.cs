@@ -132,19 +132,6 @@ public class Wave : MonoBehaviour
             m_text.text = string.Format("몬스터수 : " + (monster3.Length - i - 1) + " / " + monster3.Length);
         }
     }
-    public void End()
-    {
 
-        Debug.Log("된다2");
-
-        if (UIManager.Instance.INGameUI[2] != null)
-        {
-            UIManager.Instance.ClearStage();
-        }
-        if (SceneManager.GetActiveScene().name == "3StageSceneGrid")
-        {
-            SceneManager.LoadScene("ClearScene");
-        }
-
-    }
+   
 }

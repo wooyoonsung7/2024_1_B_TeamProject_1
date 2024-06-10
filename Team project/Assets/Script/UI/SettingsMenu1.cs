@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SettingsMenu : MonoBehaviour
+public class SettingsMenu1 : MonoBehaviour
 {
     public GameObject settingsPanel;
     public Button continueButton; // 게임 계속하기 버튼
     public Button restartButton;
     public Button mainMenuButton;
     public Button quitButton;
-    public bool isPaused = false;
+    public bool Paused = false;
 
     void Start()
     {
@@ -37,14 +37,14 @@ public class SettingsMenu : MonoBehaviour
     {
         settingsPanel.SetActive(true);
         Time.timeScale = 0f; // 게임 일시 정지
-        isPaused = true;
+        Paused = true;
     }
 
     public void CloseSettingsMenu()
     {
         settingsPanel.SetActive(false);
         Time.timeScale = 1f; // 게임 재개
-        isPaused = false;
+        Paused = false;
     }
 
     public void ContinueGame()
@@ -57,7 +57,7 @@ public class SettingsMenu : MonoBehaviour
     {
         // 현재 씬 다시 로드
         Time.timeScale = 1f; // 게임 시간 재개
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnToMainMenu()

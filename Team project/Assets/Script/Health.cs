@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;  // 채워진 하트 스프라이트
     public Sprite emptyHeart; // 빈 하트 스프라이트
     GameManager gamemanager;
+    public GameObject gameOverUI;
 
     void Start()
     {
@@ -67,7 +68,17 @@ public class Health : MonoBehaviour
         Debug.Log("게임 오버");
         gamemanager.gameObject.SetActive(false);
         CoinSystem.Instance.EndCoin();
-        // 게임 오버 UI 키는거 작성해야함
-        // 게임 오버했을 때 현재 게임을 일시정지하는거 어떻게 하지?
+      
+        PauseGame();
+
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(true);
+        }
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0f; // 게임을 일시정지
     }
 }
