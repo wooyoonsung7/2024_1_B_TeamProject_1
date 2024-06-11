@@ -32,6 +32,21 @@ public class SettingsMenu1 : MonoBehaviour
             isquick = false;
         }
 
+        if (Input.GetKey(KeyCode.F))
+        {
+            isquick = true;
+            Time.timeScale = 2f;
+        }
+        else
+        {
+            if (isquick == true)
+            {
+                Time.timeScale = 1f;
+                isquick = false;
+            }
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Paused == true)

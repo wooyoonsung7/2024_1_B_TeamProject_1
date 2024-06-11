@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a617143203c5c80498ccce146a533063, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7041893
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a617143203c5c80498ccce146a533063, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a617143203c5c80498ccce146a533063, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.807217
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a617143203c5c80498ccce146a533063, type: 3}
       propertyPath: m_LocalRotation.w
@@ -56,6 +56,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: "motor boat(\uC218\uC815\uBCF8)"
       objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: a617143203c5c80498ccce146a533063, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: a617143203c5c80498ccce146a533063, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: a617143203c5c80498ccce146a533063, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: a617143203c5c80498ccce146a533063, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -87,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b617a31fdcac54048a9190b2fb9a78d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHp: 220
-  speed: 7
+  EnemyHp: 300
+  speed: 6
 --- !u!135 &2371767060883426982
 SphereCollider:
   m_ObjectHideFlags: 0

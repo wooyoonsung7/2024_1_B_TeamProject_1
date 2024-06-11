@@ -820,8 +820,8 @@ MonoBehaviour:
   stageWaveMenberMax: 
   stageWaveCursor: 0
   stageWaveMenberCursor: 
-  gameClearUI: {fileID: 0}
-  gameOverUI: {fileID: 0}
+  ClearUI: {fileID: 0}
+  OverUI: {fileID: 0}
   TowerArray:
   - columns:
     - {fileID: 7211848626531062497, guid: 522e88b61ffe3ff4ca1190ca974e4d18, type: 3}
