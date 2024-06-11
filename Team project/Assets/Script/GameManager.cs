@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public class TowerData
@@ -28,8 +29,8 @@ public class GameManager : MonoBehaviour
     public int stageWaveCursor;
     public int[] stageWaveMenberCursor;
 
-    public GameObject gameClearUI;
-    public GameObject gameOverUI;
+    public GameObject ClearUI;
+    public GameObject OverUI;
 
     public enum GAMESTATE
     {
@@ -63,6 +64,9 @@ public class GameManager : MonoBehaviour
         // 돌아가긴 하는데 뭔가 timeScale로 이렇게 하면 안 될 것 같음 근데 어떻게 해야할지 모르겠어요
         WaveDataInit();
 
+        OverUI.SetActive(false);
+        ClearUI.SetActive(false);
+
         coinTimer = 1.0f;  //코인시스템
         coin = 20;
     }
@@ -71,6 +75,19 @@ public class GameManager : MonoBehaviour
     {
         stateTimer -= Time.deltaTime;
         coinTimer -= Time.deltaTime;
+
+        /*if (isAllWaveDone == true)      // 모든 웨이브가 다 끝났을 때
+        {
+            // 근데 이러면 마지막 웨이브의 마지막 몬스터가 생성된 순간의 체력이 0 이상이면 클리어가 될듯함
+            // 마지막 웨이브의 몬스터가 다 죽거나 도착한거는 어떻게 받아오지;;
+            Health health = FindObjectOfType<Health>();     // Health를 받아와서
+            int currentHealth = health.currentHealth;       // 현재 체력값을 currentHealth로 받아옴
+
+            if (currentHealth > 0) // 현재 체력이 0 초과이면
+            {
+                GameClear();        // 게임 클리어
+            }
+        }*/
 
         Coin(coinTimer);
         text.text = string.Format("{0:#,#}", coin);
@@ -132,13 +149,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameClear()        // 게임 클리어 조건안에서 호출할 함수
+    private void UnlockNewStage()   // 스테이지 진행도에 따라 스테이지 선택화면에서 unlock 하는 함수 | 실행되면 현재씬의 buildIndex + 1을 잠금해제 하므로 클리어 조건에 넣어야함
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedStage", PlayerPrefs.GetInt("UnlockedStage", 1) + 1);
+            PlayerPrefs.Save();
+        }
+    }
+
+    public void GoToSelection()
+    {
+        SceneManager.LoadScene("StageSelection");
+    }
+
+    public void GameClear()
     {
         PauseGame();
-        // 스테이지 클리어 UI 띄워줌
-        // 확인 버튼을 누르거나 일정 시간이 지나면 아래 코드가 실행되도록
-        //UnlockNewStage();                             // 선택 씬 해금
-        //SceneManager.LoadScene("StageSelection");     // 스테이지 선택 씬 로드
+        UnlockNewStage();
+        if (ClearUI != null)
+        {
+            ClearUI.SetActive(true);
+        }
     }
 
     public void Gameover()
@@ -146,10 +179,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("게임 오버");
         PauseGame();
 
-        /*if (gameOverUI != null)
+        if (OverUI != null)
         {
-            gameOverUI.SetActive(true);
-        }*/
+            OverUI.SetActive(true);
+        }
     }
 
     public void WaveStart()
