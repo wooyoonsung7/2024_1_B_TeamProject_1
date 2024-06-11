@@ -9,7 +9,6 @@ public class TowerController : MonoBehaviour
 {
     private float AttackTimer;
     public GameObject bulletPrefab;
-    public int coinValue = 0;
     public float AttackInterval = 3f;  // 포탑의 공격시간간격
     //오버랩사용
     public float halfSize = 1.0f;      //포탑의 공격범위

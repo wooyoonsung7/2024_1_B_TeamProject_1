@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de18594ef173ef84fb3895d54ca02797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
   objectIndex: 3
   arrayIndex: 0
   objectLevel: 2
@@ -84,14 +85,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2957779561591621052, guid: bdb312167369e4c49a93462d1f66a881, type: 3}
-  coinValue: 0
   AttackInterval: 0.2
   halfSize: 5
   n_LayerMask:
     serializedVersion: 2
     m_Bits: 128
-  bulletSpeed: 14
-  attackValue: 6
+  bulletSpeed: 16
+  attackValue: 8
+  draggableObject: {fileID: 0}
+  isBuild: 0
 --- !u!1001 &3443345237610821424
 PrefabInstance:
   m_ObjectHideFlags: 0
