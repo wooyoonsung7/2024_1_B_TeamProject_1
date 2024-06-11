@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5222812358082360677}
   m_Layer: 0
   m_Name: Gorilla3Lv
-  m_TagString: Tower
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7473931571678767920}
@@ -85,14 +85,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2957779561591621052, guid: bdb312167369e4c49a93462d1f66a881, type: 3}
-  coinValue: 0
-  AttackInterval: 0.2
-  halfSize: 5
+  AttackInterval: 0.6
+  halfSize: 12
   n_LayerMask:
     serializedVersion: 2
     m_Bits: 128
-  bulletSpeed: 14
-  attackValue: 20
+  bulletSpeed: 35
+  attackValue: 90
   draggableObject: {fileID: 0}
   isBuild: 0
 --- !u!1001 &6931607548382416091
