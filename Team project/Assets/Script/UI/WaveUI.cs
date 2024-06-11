@@ -23,7 +23,13 @@ public class WaveUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentWave = GameManager.Instance.stageWaveCursor + 1;     // 현재 웨이브 수를 받아옴
-        wave.text = currentWave + " / " + stageWave;
+        if (currentWave != stageWave)
+        {
+            currentWave = GameManager.Instance.stageWaveCursor + 1;     // 현재 웨이브 수를 받아옴
+            wave.text = currentWave + " / " + stageWave;
+        }
+
+        if (currentWave == stageWave)
+            wave.text = stageWave + " / " + stageWave;
     }
 }
