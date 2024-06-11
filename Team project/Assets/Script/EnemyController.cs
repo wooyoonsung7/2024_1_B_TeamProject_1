@@ -87,12 +87,13 @@ public class EnemyController : MonoBehaviour
 
         else if (other.tag == "EndPoint")       // Enemy가 끝까지 도착하면 HP를 깎음
         {
+            Debug.Log("1");
             Health health = FindObjectOfType<Health>();
             if (health != null)
             {
-                int currentHealth = health.currentHealth;
-                currentHealth--;
-                if (currentHealth <= 0)
+                Debug.Log("2");
+                health.currentHealth--;
+                if (health.currentHealth <= 0)
                 {
                     GameManager gameManager = FindObjectOfType<GameManager>();
                     if (gameManager != null)
@@ -102,6 +103,7 @@ public class EnemyController : MonoBehaviour
                     // 참조랑 if문 너무 많은데 이게 맞나;;
                 }
             }
+            Destroy(gameObject);
         }
     }
     public void OnDamage(GameObject temp)

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - EndPoint
+  - Tower
   layers:
   - Default
   - TransparentFX

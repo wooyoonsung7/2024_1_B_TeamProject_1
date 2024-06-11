@@ -21,15 +21,20 @@ public class SettingsMenu1 : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.isGameOver)
+            return;
         if (Input.GetKey(KeyCode.F))
         {
             isquick = true;
-            Time.timeScale = 2f;
+            Time.timeScale = 10f;
         }
-        else if(isquick == true)
-{
-            Time.timeScale = 1f;
-            isquick = false;
+        else
+        {
+            if (isquick == true)
+            {
+                Time.timeScale = 1f;
+                isquick = false;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

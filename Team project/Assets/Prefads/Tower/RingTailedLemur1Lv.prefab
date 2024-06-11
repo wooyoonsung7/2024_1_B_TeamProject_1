@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4876815433763465520}
   m_Layer: 0
   m_Name: RingTailedLemur1Lv
-  m_TagString: Enemy
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de18594ef173ef84fb3895d54ca02797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
   objectIndex: 11
   arrayIndex: 1
   objectLevel: 0
@@ -92,6 +93,8 @@ MonoBehaviour:
     m_Bits: 128
   bulletSpeed: 14
   attackValue: 4
+  draggableObject: {fileID: 0}
+  isBuild: 0
 --- !u!1001 &6831528502399043889
 PrefabInstance:
   m_ObjectHideFlags: 0
