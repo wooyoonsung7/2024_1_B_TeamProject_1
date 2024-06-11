@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     public GameObject ClearUI;
     public GameObject OverUI;
 
+    private const string StarCountKeyPrefs = "StarCount_";
+    // 클리어 때 주어질 별의 개수를 저장할 PlayerPrefs 키 디폴트 이름
+
     public enum GAMESTATE
     {
         GAMESTART,
@@ -84,7 +87,7 @@ public class GameManager : MonoBehaviour
             gameObjects = GameObject.FindGameObjectsWithTag("Enemy");   // 태그가 Enemy인 오브젝트를 배열로 받아옴 (마지막 웨이브 몬스터를 받아올것임)
             if (gameObjects.Length == 0)    // 배열의 길이가 0이면. 즉, 씬에 Enemy가 존재하지 않으면
             {
-                Health health = FindObjectOfType<Health>();     // Health를 받아와서
+                Health health = FindObjectOfType<Health>();
                 int currentHealth = health.currentHealth;       // 현재 체력값을 currentHealth로 받아옴
 
                 if (currentHealth > 0) // 현재 체력이 0 초과이면
@@ -168,6 +171,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int StarCount()      // 현재 체력값에 따라 별의 개수를 반환하는 함수
+    {
+        Health health = FindObjectOfType<Health>();
+        int currentHealth = health.currentHealth;
+
+        if (currentHealth >= 5)
+        {
+            return 3;
+        }
+        else if (currentHealth >= 2)
+        {
+            return 2;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+
+    public void SaveStarCount()     // StarCount에서 계산한 별 개수를 저장하는 함수
+    {   // StarCountKeyPrefs은 "StarCount_" 임
+        // 현재 스테이지 번호와 현재 별 개수를 매칭시켜서 저장해야함
+        int starCount = StarCount();    // 별의 개수를 계산하여 starCount에 할당
+
+        // "StarCount_씬번호" 라는 키에 starCount가 저장됨. 각 스테이지 마다 별 개수를 저장할 수 있음
+        PlayerPrefs.SetInt(StarCountKeyPrefs + SceneManager.GetActiveScene().buildIndex, starCount);
+        PlayerPrefs.Save();
+    }
+
     public void GoToSelection()
     {
         SceneManager.LoadScene("StageSelection");
@@ -177,6 +209,7 @@ public class GameManager : MonoBehaviour
     {
         PauseGame();
         UnlockNewStage();
+        SaveStarCount();
         if (ClearUI != null)
         {
             ClearUI.SetActive(true);
