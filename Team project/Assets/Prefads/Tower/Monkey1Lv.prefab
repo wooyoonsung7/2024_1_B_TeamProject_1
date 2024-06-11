@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8657650520327778624}
   m_Layer: 0
   m_Name: Monkey1Lv
-  m_TagString: Enemy
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

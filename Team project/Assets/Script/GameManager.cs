@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public float spawnTimer;
     public bool isWaveDone;
     public bool isAllWaveDone;
+    public bool isGameOver;
 
     public int stageWaveCount;
     public int[] stageWaveMenberMax;
@@ -54,6 +55,10 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        isGameOver = false;
+
+        ClearUI.SetActive(false);
+        OverUI.SetActive(false);
     }
 
     void Start()
@@ -64,9 +69,6 @@ public class GameManager : MonoBehaviour
         // 돌아가긴 하는데 뭔가 timeScale로 이렇게 하면 안 될 것 같음 근데 어떻게 해야할지 모르겠어요
         WaveDataInit();
 
-        OverUI.SetActive(false);
-        ClearUI.SetActive(false);
-
         coinTimer = 1.0f;  //코인시스템
         coin = 20;
     }
@@ -76,18 +78,22 @@ public class GameManager : MonoBehaviour
         stateTimer -= Time.deltaTime;
         coinTimer -= Time.deltaTime;
 
-        /*if (isAllWaveDone == true)      // 모든 웨이브가 다 끝났을 때
+        if (isAllWaveDone == true)      // 모든 웨이브가 다 끝났을 때
         {
-            // 근데 이러면 마지막 웨이브의 마지막 몬스터가 생성된 순간의 체력이 0 이상이면 클리어가 될듯함
-            // 마지막 웨이브의 몬스터가 다 죽거나 도착한거는 어떻게 받아오지;;
-            Health health = FindObjectOfType<Health>();     // Health를 받아와서
-            int currentHealth = health.currentHealth;       // 현재 체력값을 currentHealth로 받아옴
-
-            if (currentHealth > 0) // 현재 체력이 0 초과이면
+            GameObject[] gameObjects;       // 남아있는 몬스터를 받아올 배열
+            gameObjects = GameObject.FindGameObjectsWithTag("Enemy");   // 태그가 Enemy인 오브젝트를 배열로 받아옴 (마지막 웨이브 몬스터를 받아올것임)
+            if (gameObjects.Length == 0)    // 배열의 길이가 0이면. 즉, 씬에 Enemy가 존재하지 않으면
             {
-                GameClear();        // 게임 클리어
+                Health health = FindObjectOfType<Health>();     // Health를 받아와서
+                int currentHealth = health.currentHealth;       // 현재 체력값을 currentHealth로 받아옴
+
+                if (currentHealth > 0) // 현재 체력이 0 초과이면
+                {
+                    GameClear();        // 게임 클리어
+                    UnlockNewStage();
+                }
             }
-        }*/
+        }
 
         Coin(coinTimer);
         text.text = string.Format("{0:#,#}", coin);
@@ -164,7 +170,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("StageSelection");
     }
 
-    public void GameClear()
+    public void GameClear()     
     {
         PauseGame();
         UnlockNewStage();
@@ -176,6 +182,7 @@ public class GameManager : MonoBehaviour
 
     public void Gameover()
     {
+        isGameOver = true;
         Debug.Log("게임 오버");
         PauseGame();
 
@@ -220,6 +227,7 @@ public class GameManager : MonoBehaviour
             {
                 stageWaveCursor = 0;
                 isAllWaveDone = true;
+                Debug.Log("트루로바뀜");
             }
             spawnTimer = 0.0f;   
         }      
@@ -273,4 +281,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /*public void GameSpeedButton()
+    {
+        float currentTimeScale = Time.timeScale;
+
+        if (currentTimeScale == 1.0f)
+        {
+            Time.timeScale = 2.0f;
+        }
+        else if (currentTimeScale == 2.0f)
+        {
+            Time.timeScale = 1.0f;
+        }
+    }*/
 }
