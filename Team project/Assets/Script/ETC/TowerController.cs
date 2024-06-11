@@ -26,6 +26,7 @@ public class TowerController : MonoBehaviour
     void Start()
     {
         AttackTimer = 0;
+        movetimer = 3;
         draggableObject = GetComponent<DraggableObject>();
     }
 
