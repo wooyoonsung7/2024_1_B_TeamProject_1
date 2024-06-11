@@ -30,15 +30,15 @@ public class StageSelection : MonoBehaviour
     }*/
 
     private void Awake()
-    {
-        int unlockedStage = PlayerPrefs.GetInt("UnlockedStage", 1);
-        for (int i = 0; i < buttons.Length; i++)
+    {   // UnlockedStage 키는 GameManager 에서 SetInt 함
+        int unlockedStage = PlayerPrefs.GetInt("UnlockedStage", 1);     // 해금된 스테이지 수를 불러온다 (없다면 1을 반환(처음에 1스테이지는 해금되어 있어야 하니까))
+        for (int i = 0; i < buttons.Length; i++)    // 버튼 개수 만큼 반복
         {
-            buttons[i].interactable = false;
+            buttons[i].interactable = false;    // 일단 버튼을 다 비활성화 시키고
         }
-        for (int i = 0; i < unlockedStage; i++)
+        for (int i = 0; i < unlockedStage; i++)     // 해금된 버튼 까지만 반복
         {
-            buttons[i].interactable = true;
+            buttons[i].interactable = true;     // 버튼 상호작용 활성화
         }
     }
 
@@ -49,7 +49,7 @@ public class StageSelection : MonoBehaviour
 
     public void LoadStage(int stageNum)
     {
-        string stageName = "Stage " + stageNum;
+        string stageName = "Stage " + stageNum;     // 씬 이름 바꾸면 바꿔줘야함
         SceneManager.LoadScene(stageName);
     }
 }

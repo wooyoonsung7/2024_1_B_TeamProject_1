@@ -155,13 +155,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void UnlockNewStage()   // 스테이지 진행도에 따라 스테이지 선택화면에서 unlock 하는 함수 | 실행되면 현재씬의 buildIndex + 1을 잠금해제 하므로 클리어 조건에 넣어야함
+    private void UnlockNewStage()   // 스테이지 진행도에 따라 해금시켜주는 함수
     {
-        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
-        {
-            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
-            PlayerPrefs.SetInt("UnlockedStage", PlayerPrefs.GetInt("UnlockedStage", 1) + 1);
-            PlayerPrefs.Save();
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("UnlockedStage")) // 현재 활성화 되어있는 씬의 buildSetting번호 (우리 게임은 이 번호와 스테이지 번호가 같음)
+        {   // 씬 번호가 ReachedIndex 보다 크거나 같으면 아래 코드 실행. (ReachedIndex 키는 존재하지 않기 때문에 처음에는 0을 반환함
+            // 그렇기 때문에 1 >= 0으로 처음(1스테이지)에는 무조건 실행됨.
+            // PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);   // ReachedIndex 키에 현재 씬 번호 + 1 을 할당함
+            PlayerPrefs.SetInt("UnlockedStage", PlayerPrefs.GetInt("UnlockedStage", 1) + 1);    // UnlockedStage(현재 스테이지 수) 키에 + 1 을 할당함
+            PlayerPrefs.Save();     // 혹시 모르니 (+ 게임을 껐다가 켜도 해금 스테이지 유지) UnlockedStage 키를 저장
+
+            // 우리 게임은 buildindex와 스테이지 번호가 같음 그래서 buildindex를 받아오는 키는 없어도 됨
         }
     }
 
