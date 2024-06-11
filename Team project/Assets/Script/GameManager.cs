@@ -227,7 +227,6 @@ public class GameManager : MonoBehaviour
             {
                 stageWaveCursor = 0;
                 isAllWaveDone = true;
-                Debug.Log("Æ®·ç·Î¹Ù²ñ");
             }
             spawnTimer = 0.0f;   
         }      
