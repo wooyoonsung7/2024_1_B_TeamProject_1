@@ -7,6 +7,15 @@ public class MainMenu : MonoBehaviour
 {
     public void OnClickStart()
     {
+        if (PlayerPrefs.GetInt("IsFirstLaunch", 0) == 0)    // 처음실행일 때
+        {
+            // 처음이라면 Get받아올 키가 존재하지 않으므로 (선언이 안 됐으니까) 무조건 0이기 때문에 0==0으로 아래 코드가 실행됨
+            GameManager.Instance.InitializePlayerPrefs();   // 모든 PlayerPrefs 키를 초기화한다
+
+            // InitializePlayerPrefs 함수가 실행되면 키를 초기화하고 IsFirstLaunch키를 1로 선언
+            // 이후에 GetInt로 1을 받아오므로 1==0이 false. 따라서 초기화를 한 번 했다면 다시는 초기화가 진행되지 않는다.
+        }
+
         SceneManager.LoadScene("StageSelection");
     }
 

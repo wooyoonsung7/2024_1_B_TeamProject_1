@@ -199,15 +199,30 @@ public class GameManager : MonoBehaviour
         // 현재 스테이지 번호와 현재 별 개수를 매칭시켜서 저장해야함
         int starCount = StarCount();    // 별의 개수를 계산하여 starCount에 할당
 
-        int bestStars = PlayerPrefs.GetInt(StarCountKeyPrefs + SceneManager.GetActiveScene().buildIndex);
+        int bestStars = PlayerPrefs.GetInt(StarCountKeyPrefs + SceneManager.GetActiveScene().buildIndex);   // 현재 스테이지의 별 개수를 불러옴
 
-        if (starCount >= bestStars)
+        if (starCount >= bestStars)     // 최고기록만 저장함
         {
             bestStars = starCount;
         }
 
         // "StarCount_씬번호" 라는 키에 starCount가 저장됨. 각 스테이지 마다 별 개수를 저장할 수 있음
         PlayerPrefs.SetInt(StarCountKeyPrefs + SceneManager.GetActiveScene().buildIndex, bestStars);
+        PlayerPrefs.Save();
+    }
+
+    public void InitializePlayerPrefs()     // 현재 선언된 모든 PlayerPrefs키를 초기화 시켜주는 함수 (새로운 키 생기면 추가해야함)
+    {   // 시간없고 피곤해서 그냥 하드코딩함
+        // !!!절대로 막 호출하면 안 됨!!!!
+        PlayerPrefs.SetInt("UnlockedStage", 1);     // 해금된 스테이지 초기화 (1스테이지부터)
+
+        for (int i=0; i < 30; i++)
+        {
+            PlayerPrefs.SetInt(StarCountKeyPrefs + (i + 1), 0);     // 스테이지마다 별 개수 초기화 (모두 0으로)
+        }
+
+        PlayerPrefs.SetInt("IsFirstLaunch", 1);     // 처음 실행되었음을 표시 (이 함수를 호출할때 최초실행 구분을 위해)
+
         PlayerPrefs.Save();
     }
 
