@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     float coinTimer;
     public Text text;
     bool isBuy = false;
+    public int getcoin = 0;  //몬스터를 죽일 시, 얻을 코인값
 
     public GAMESTATE gamestate;
 
@@ -97,9 +98,12 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-
-        Coin(coinTimer);
-        text.text = string.Format("{0:#,#}", coin);
+        if (coinTimer <= 0.0f || getcoin != 0)
+        {
+            Coin(coinTimer, getcoin);
+        }
+        //text.text = string.Format("{0:#,#}", coin);  // 코인이 0일 때, 텍스트에 0이 나오지 않음
+        text.text = "" + coin + "";
 
         switch (gamestate)
         {
@@ -304,14 +308,18 @@ public class GameManager : MonoBehaviour
 
         }
     }
-    void Coin(float Timer)
+    void Coin(float Timer, int getCoin)
     {
         if (Timer <= 0.0f && isBuy == false)
         {
-            coin += 3;
+            coin += 2;
             coinTimer = 1f;
         }
-
+        if (getCoin != 0)
+        {
+            coin += getCoin;
+            getcoin = 0;
+        }
     }
     public void BuyCard(int cardValue)
     {

@@ -803,6 +803,7 @@ MonoBehaviour:
     - {fileID: 3866572918866478442, guid: d76da8d031d0f6b41988a2850d250b59, type: 3}
   coin: 0
   text: {fileID: 1878259280}
+  getcoin: 0
   gamestate: 0
 --- !u!4 &14684300
 Transform:

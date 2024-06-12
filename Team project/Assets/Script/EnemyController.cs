@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
 {
     public int EnemyHp = 10;
     public float speed = 2.0f;
+    public int coinValue = 0;
 
     private Transform[] wayPoints;
     private int currentWayPointIndex = 0;
@@ -111,6 +112,7 @@ public class EnemyController : MonoBehaviour
         if (EnemyHp <= 0)
         {
             gameObject.SetActive(false);
+            GameManager.Instance.getcoin = coinValue;
         }
         
     }
