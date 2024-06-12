@@ -195,8 +195,15 @@ public class GameManager : MonoBehaviour
         // 현재 스테이지 번호와 현재 별 개수를 매칭시켜서 저장해야함
         int starCount = StarCount();    // 별의 개수를 계산하여 starCount에 할당
 
+        int bestStars = PlayerPrefs.GetInt(StarCountKeyPrefs + SceneManager.GetActiveScene().buildIndex);
+
+        if (starCount >= bestStars)
+        {
+            bestStars = starCount;
+        }
+
         // "StarCount_씬번호" 라는 키에 starCount가 저장됨. 각 스테이지 마다 별 개수를 저장할 수 있음
-        PlayerPrefs.SetInt(StarCountKeyPrefs + SceneManager.GetActiveScene().buildIndex, starCount);
+        PlayerPrefs.SetInt(StarCountKeyPrefs + SceneManager.GetActiveScene().buildIndex, bestStars);
         PlayerPrefs.Save();
     }
 
