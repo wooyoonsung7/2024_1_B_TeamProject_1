@@ -16299,6 +16299,7 @@ GameObject:
   - component: {fileID: 751684803}
   - component: {fileID: 751684802}
   - component: {fileID: 751684806}
+  - component: {fileID: 751684807}
   m_Layer: 5
   m_Name: Setting UI
   m_TagString: Untagged
@@ -16407,6 +16408,22 @@ MonoBehaviour:
   mainMenuButton: {fileID: 772814059}
   quitButton: {fileID: 539631521}
   Paused: 0
+--- !u!114 &751684807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751684800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2f2253241ab884b9cd65ab6439e7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+  musicMasterSlider: {fileID: 0}
+  musicBGMSlider: {fileID: 1520343433}
+  musicSFXSlider: {fileID: 1516150918}
 --- !u!1 &751808208
 GameObject:
   m_ObjectHideFlags: 0

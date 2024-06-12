@@ -14,8 +14,8 @@ public class AudioMixerController : MonoBehaviour
 
     private void Awake()
     {
-        // 마스터 슬라이더의 값이 변경될 때 리스너를 통해서 함수에 값을 전달한다.
-        musicMasterSlider.onValueChanged.AddListener(SetMasterVolume);
+        /*// 마스터 슬라이더의 값이 변경될 때 리스너를 통해서 함수에 값을 전달한다.
+        musicMasterSlider.onValueChanged.AddListener(SetMasterVolume);*/
 
         // BGM 슬라이더의 값이 변경될 때 리스너를 통해서 함수에 값을 전달한다.
         musicBGMSlider.onValueChanged.AddListener(SetBGMVolume);
