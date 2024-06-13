@@ -217,6 +217,7 @@ public class GameManager : MonoBehaviour
     {   // 시간없고 피곤해서 그냥 하드코딩함
         // !!!절대로 막 호출하면 안 됨!!!!
         PlayerPrefs.SetInt("UnlockedStage", 1);     // 해금된 스테이지 초기화 (1스테이지부터)
+        PlayerPrefs.SetInt("TutorialDone", 0);      // 튜토리얼 미완료로 초기화
 
         for (int i=0; i < 30; i++)
         {
