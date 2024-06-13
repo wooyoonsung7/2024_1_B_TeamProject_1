@@ -36,7 +36,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))                  // 카드가 설치 가능
         {
             if (hit.collider.tag == "TowerBase")
             {
@@ -46,18 +46,20 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         return;
                     image.color = impossibleColor;
                 }
-                if (image.color == possibleColor)
-                    return;
-                image.color = possibleColor;
-                //Debug.Log("설치가능");
+                else
+                {
+                    if (image.color == possibleColor)
+                        return;
+                    image.color = possibleColor;
+                }
             }
-            else
+            /*else
             {
                 if (image.color == impossibleColor)
                     return;
                 image.color = impossibleColor;
                 //Debug.Log("설치불가능");
-            }
+            }*/
         }
     }
 
