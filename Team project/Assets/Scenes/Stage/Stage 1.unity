@@ -1454,6 +1454,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 50456939}
+  possibleColor: {r: 0.4292453, g: 1, b: 0.58123386, a: 1}
+  impossibleColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
   cardIndex: 1
   CoinValue: 25
 --- !u!114 &50456939
@@ -14659,6 +14662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  possibleColor: {r: 0, g: 0, b: 0, a: 0}
+  impossibleColor: {r: 0, g: 0, b: 0, a: 0}
   cardIndex: 4
   CoinValue: 80
 --- !u!114 &677987227
@@ -15555,6 +15561,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  possibleColor: {r: 0, g: 0, b: 0, a: 0}
+  impossibleColor: {r: 0, g: 0, b: 0, a: 0}
   cardIndex: 3
   CoinValue: 65
 --- !u!114 &730986665
@@ -16840,6 +16849,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 788355576}
+  possibleColor: {r: 0.4292453, g: 1, b: 0.58123386, a: 1}
+  impossibleColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
   cardIndex: 2
   CoinValue: 50
 --- !u!114 &788355576
@@ -26006,7 +26018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1178475321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26108,7 +26120,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d274cbe109004da42ae0d89da2230af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tutorials: []
+  Tutorials:
+  - {fileID: 1421165454}
+  - {fileID: 845934069}
+  - {fileID: 1025407441}
+  - {fileID: 426248498}
+  - {fileID: 800661542}
+  - {fileID: 599099902}
+  - {fileID: 1243466239}
 --- !u!1001 &1179985423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30507,7 +30526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1421165455
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33686,6 +33705,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 1637228310}
+  possibleColor: {r: 0.4292453, g: 1, b: 0.58123386, a: 1}
+  impossibleColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
   cardIndex: 0
   CoinValue: 10
 --- !u!114 &1637228310

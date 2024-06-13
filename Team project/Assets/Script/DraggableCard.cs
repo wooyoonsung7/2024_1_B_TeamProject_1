@@ -1,5 +1,8 @@
 using DG.Tweening.Core.Easing;
+using Microsoft.Unity.VisualStudio.Editor;
+using System.Drawing;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -8,6 +11,9 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private Vector2 originalPosition;
+    public UnityEngine.UI.Image image;
+    public UnityEngine.Color possibleColor;
+    public UnityEngine.Color impossibleColor;
     public int cardIndex = 0;
     public int CoinValue = 0;  //코인값지정
 
@@ -26,11 +32,38 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        Vector2 screenPosition = rectTransform.position;
+        Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.tag == "TowerBase")
+            {
+                if (GameManager.Instance.coin < CoinValue)
+                {
+                    if (image.color == impossibleColor)
+                        return;
+                    image.color = impossibleColor;
+                }
+                if (image.color == possibleColor)
+                    return;
+                image.color = possibleColor;
+                //Debug.Log("설치가능");
+            }
+            else
+            {
+                if (image.color == impossibleColor)
+                    return;
+                image.color = impossibleColor;
+                //Debug.Log("설치불가능");
+            }
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
-    {     
-
+    {
+        image.color = UnityEngine.Color.white;
         // 드래그 종료 시 3D 객체에 영향을 주는 로직 호출        
         Affect3DObject();       
         rectTransform.anchoredPosition = originalPosition;
