@@ -55,7 +55,7 @@ public class DraggableObject : MonoBehaviour
 
     private bool CheckForMerge()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.5f);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f);
         foreach (var hitCollider in hitColliders)
         {
             if (hitCollider.gameObject != gameObject)
