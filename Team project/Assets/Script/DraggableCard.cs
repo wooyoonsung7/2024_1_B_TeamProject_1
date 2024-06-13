@@ -53,6 +53,12 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                     image.color = possibleColor;
                 }
             }
+            else
+            {
+                if (image.color == UnityEngine.Color.white)
+                    return;
+                image.color = UnityEngine.Color.white;
+            }
             /*else
             {
                 if (image.color == impossibleColor)
