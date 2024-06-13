@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b6b8aa10caf244ea449d54dc290a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7371014632387207887, guid: 7cdd2911ce90f28429d96592bf68a634, type: 3}
+  bulletPrefab: {fileID: 6111484609971715238, guid: 85090b79f2a069b429754692a4357106, type: 3}
   AttackInterval: 0.2
   halfSize: 7
   n_LayerMask:
