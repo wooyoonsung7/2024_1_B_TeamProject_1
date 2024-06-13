@@ -1,5 +1,17 @@
+자료를 사용하는 곳과 가까운 곳에 저작자 표시 줄을 삽입해 주세요. 불가능한 경우 크레딧 섹션에 배치해 주세요.
+
+예. '이미지: flaticon.com'. 이 커버는 Flaticon.com의 자료를 사용해 디자인되었습니다
+
+
+
 <a href="https://www.flaticon.com/kr/free-icons/" title="하트 아이콘">하트 아이콘 제작자: Smashicons - Flaticon</a>
 
 <a href="https://www.flaticon.com/kr/free-icons/" title="맞추다 아이콘">맞추다 아이콘 제작자: Google - Flaticon</a>
 
 <a href="https://www.flaticon.com/kr/free-icons/ui-" title="ui 디자인 아이콘">Ui 디자인 아이콘 제작자: ifans28 - Flaticon</a>
+
+<a href="https://www.flaticon.com/kr/free-icons/" title="정보 아이콘">정보 아이콘 제작자: SeyfDesigner - Flaticon</a>
+
+<a href="https://www.flaticon.com/kr/free-icons/-" title="오른쪽 화살표 아이콘">오른쪽 화살표 아이콘 제작자: Andrean Prabowo - Flaticon</a>
+
+<a href="https://www.flaticon.com/kr/free-icons/-" title="마우스 리모콘 아이콘">마우스 리모콘 아이콘 제작자: Freepik - Flaticon</a>

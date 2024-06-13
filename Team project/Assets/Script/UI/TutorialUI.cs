@@ -20,12 +20,11 @@ public class TutorialUI : MonoBehaviour
         tutorialCanvas.SetActive(true);
 
         // 튜토리얼캔버스의 하위 자식들을 false로 만듦
-        tutorialCanvas.transform.GetChild(0).gameObject.SetActive(false);
-        tutorialCanvas.transform.GetChild(1).gameObject.SetActive(false);
-        tutorialCanvas.transform.GetChild(2).gameObject.SetActive(false);
-        tutorialCanvas.transform.GetChild(3).gameObject.SetActive(false);
-        tutorialCanvas.transform.GetChild(4).gameObject.SetActive(false);
-        tutorialCanvas.transform.GetChild(5).gameObject.SetActive(false);
+        for (int i = 0; i < 12; i++)
+        {
+            tutorialCanvas.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        // tutorialCanvas.transform.GetChild(0).gameObject.SetActive(false);
 
         PlayerPrefs.DeleteKey("TutorialDone");      // 테스트용. 항상 튜토리얼을 처음보는 상태로 만듦. 다 개발되면 삭제해야함
 
@@ -78,21 +77,19 @@ public class TutorialUI : MonoBehaviour
     // 버튼에 붙이는 함수
     public void TutorialNextOnClick(int i)
     {
-        if (0 <= i && i <= 4)
+        if (0 <= i && i <= 10)
         {
             tutorialCanvas.transform.GetChild(i).gameObject.SetActive(false);       // 현재 이미지를 끄고
             tutorialCanvas.transform.GetChild(i + 1).gameObject.SetActive(true);      // 다음 이미지를 켠다
         }
         else
         {
-            Debug.Log("존재하지 않음");
+            //Debug.Log("존재하지 않음");
         }
 
-        if (i == 5)     // 마지막 이미지 버튼일 때 작동
+        if (i == 11)     // 마지막 이미지 버튼일 때 작동
         {
-            tutorialCanvas.transform.GetChild(5).gameObject.SetActive(false);        // 마지막 이미지 끄기
-            tutorialCanvas.transform.GetChild(0).gameObject.SetActive(true);         // 첫 번째 이미지 킨 상태로
-            tutorialCanvas.SetActive(false);                                         // 캔버스 끄기
+            tutorialCanvas.transform.GetChild(11).gameObject.SetActive(false);        // 마지막 이미지 끄기
             Time.timeScale = 1.0f;
         }
     }
