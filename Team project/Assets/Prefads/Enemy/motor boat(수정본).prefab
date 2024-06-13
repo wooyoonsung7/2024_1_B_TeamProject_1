@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "motor boat(\uC218\uC815\uBCF8)"
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a617143203c5c80498ccce146a533063, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a617143203c5c80498ccce146a533063, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a617143203c5c80498ccce146a533063, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -71,6 +79,10 @@ PrefabInstance:
     - target: {fileID: 1151388028547126963, guid: a617143203c5c80498ccce146a533063, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a617143203c5c80498ccce146a533063, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
