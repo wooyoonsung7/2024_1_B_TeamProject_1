@@ -64,7 +64,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        image.color = UnityEngine.Color.white;
+        /*image.color = UnityEngine.Color.white;*/
         // 드래그 종료 시 3D 객체에 영향을 주는 로직 호출        
         Affect3DObject();       
         rectTransform.anchoredPosition = originalPosition;
