@@ -90,7 +90,6 @@ public class TowerController : MonoBehaviour
                 break;
             case 2:
                 transform.DORotate(new Vector3(0, 90, 0), 1f); movetimer = 0;
-                Debug.Log("µÈ´Ù");
                 break;
             case 3:
                 transform.DORotate(new Vector3(0, 270, 0), 1f); movetimer = 0;

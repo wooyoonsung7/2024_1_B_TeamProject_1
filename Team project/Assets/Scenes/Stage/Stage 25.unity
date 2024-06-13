@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 14684299}
   - component: {fileID: 14684298}
   - component: {fileID: 14684297}
+  - component: {fileID: 14684301}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -439,6 +440,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14684301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14684296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e56957bc1bc9354ba54de71e4d46599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  hearts:
+  - {fileID: 795890729}
+  - {fileID: 268615039}
+  - {fileID: 13657449}
+  - {fileID: 1694268495}
+  - {fileID: 1778046701}
+  fullHeart: {fileID: 21300000, guid: 1dca39fc92cb39f4c99b13966a2bfcc7, type: 3}
+  emptyHeart: {fileID: 21300000, guid: caba5ca8840f9bc4e8a07e5fe8c60983, type: 3}
 --- !u!1 &17843447
 GameObject:
   m_ObjectHideFlags: 0
