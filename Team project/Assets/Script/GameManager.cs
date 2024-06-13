@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     public Text text;
     bool isBuy = false;
     public int getcoin = 0;  //몬스터를 죽일 시, 얻을 코인값
+    int allcoin = 0;
 
     public GAMESTATE gamestate;
 
@@ -75,6 +76,7 @@ public class GameManager : MonoBehaviour
 
         coinTimer = 1.0f;  //코인시스템
         coin = 20;
+        allcoin = 20;
     }
 
      void Update()
@@ -258,7 +260,7 @@ public class GameManager : MonoBehaviour
     {
         if (stateTimer <= 0.0f)
         {
-            ChangeGameState(GAMESTATE.DOWAVE, stageWaveData.WaveTimer);
+            ChangeGameState(GAMESTATE.DOWAVE, 1);
             spawnTimer = 0.0f;
             isWaveDone = false;
         }
@@ -283,20 +285,29 @@ public class GameManager : MonoBehaviour
                 stageWaveMenberCursor[stageWaveCursor] = 0;
                 stageWaveCursor += 1;               
                 isWaveDone = true;
+
+                if (stateTimer <= 0.0f)
+                {
+                    ChangeGameState(GAMESTATE.WAVEDONE, 1);
+                }
             }
 
             if(stageWaveCursor >= stageWaveCount)
             {
                 stageWaveCursor = 0;
                 isAllWaveDone = true;
+
+                if (stateTimer <= 0.0f)
+                {
+                    ChangeGameState(GAMESTATE.WAVEDONE, 1);
+                }
             }
             spawnTimer = 0.0f;   
         }      
-
-        if (stateTimer <= 0.0f)
+        /*if (stateTimer <= 0.0f)
         {
             ChangeGameState(GAMESTATE.WAVEDONE, 1);
-        }
+        }*/
     }
 
     public void WaveDone()
@@ -307,7 +318,7 @@ public class GameManager : MonoBehaviour
         }
         else if (stateTimer <= 0.0f && !isAllWaveDone)
         {
-            ChangeGameState(GAMESTATE.WAVESTART, 1);
+            ChangeGameState(GAMESTATE.WAVESTART, stageWaveData.WaveTimer);
         }
     }
 
@@ -328,13 +339,16 @@ public class GameManager : MonoBehaviour
         if (Timer <= 0.0f && isBuy == false)
         {
             coin += 2;
+            allcoin += 2;
             coinTimer = 1f;
         }
         if (getCoin != 0)
         {
             coin += getCoin;
+            allcoin += getCoin;
             getcoin = 0;
         }
+        Debug.Log(allcoin);
     }
     public void BuyCard(int cardValue)
     {
