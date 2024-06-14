@@ -91,7 +91,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   bulletSpeed: 16
-  attackValue: 8
+  attackValue: 6
   draggableObject: {fileID: 0}
   isBuild: 0
 --- !u!1001 &4533618189886503679

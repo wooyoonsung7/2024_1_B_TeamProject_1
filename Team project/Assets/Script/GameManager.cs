@@ -75,8 +75,8 @@ public class GameManager : MonoBehaviour
         WaveDataInit();
 
         coinTimer = 1.0f;  //코인시스템
-        coin = 20;
-        allcoin = 20;
+        coin = 35;
+        allcoin = 35;
     }
 
      void Update()
