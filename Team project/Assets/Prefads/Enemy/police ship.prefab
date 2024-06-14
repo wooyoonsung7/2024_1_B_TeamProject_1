@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyHp: 800
-  speed: 5
+  speed: 4.5
   coinValue: 35
 --- !u!135 &-5791776906649821647
 SphereCollider:
