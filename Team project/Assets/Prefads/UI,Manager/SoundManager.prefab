@@ -67,14 +67,14 @@ MonoBehaviour:
     mixerGroup: {fileID: 1539787615243801555, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
   - name: Clear
-    clip: {fileID: 8300000, guid: c76e7dc5d91533b4984a8307fb70c4e6, type: 3}
+    clip: {fileID: 8300000, guid: 6b0bf07b0ea3f2c4aa6eb1a0792e0743, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
   - name: Over
-    clip: {fileID: 8300000, guid: ef418b3756b532c4895a42b155756d8e, type: 3}
+    clip: {fileID: 8300000, guid: 073b73f8e29517845892f76df8f32022, type: 3}
     volume: 1
     pitch: 1
     loop: 0

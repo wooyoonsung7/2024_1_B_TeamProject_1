@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        SoundManager.instance.StopSound("Over");
         int i = SceneManager.GetActiveScene().buildIndex;
         if (i==3)     // 피버 스테이지 (너무 야매로 했음...고민하면 효율적으로 할 수 있을 것 같은데 시간이 없음)
         {
@@ -267,6 +268,8 @@ public class GameManager : MonoBehaviour
     public void Gameover()
     {
         SoundManager.instance.PlaySound("Over");
+        SoundManager.instance.StopSound("GameBGM");
+        SoundManager.instance.StopSound("FeverBGM");
         isGameOver = true;
         Debug.Log("게임 오버");
         PauseGame();
@@ -300,6 +303,7 @@ public class GameManager : MonoBehaviour
             // stageWaveMenberCursor int 배열의 0번째에 1을 증가 시킴 (= 소환된 몬스터 수. 배열의 순서는 웨이브 순서)
             Instantiate(temp, StageManager.Instance.startPoint.position, Quaternion.identity);
             // 받아온 temp 몬스터를 소환
+            SoundManager.instance.PlaySound("EnemySpawn");
 
             if (stageWaveMenberCursor[stageWaveCursor] >= stageWaveMenberMax[stageWaveCursor])  // 소환된 몬스터 수(stageWaveMenberCursor)가 소환될 몬스터 수(stageWaveMenberMax)보다 크거나 같으면 초기화하고 다음 웨이브로 넘어감
             {

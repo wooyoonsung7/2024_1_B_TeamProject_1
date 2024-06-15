@@ -15,12 +15,12 @@ public class StageSelection : MonoBehaviour
     public Sprite emptyStarSprite;
     private const string StarCountKeyPrefs = "StarCount_";  // 수정할수도 있으니 상수 선언
 
-    private void Start()
+    /*private void Start()
     {
-        SoundManager.instance.PlaySound("MainBGM");
+        AddListener();
     }
 
-    /*public void AddListener()
+    public void AddListener()
     {
         for (int i = 0; i < buttons.Length; i++)
         {

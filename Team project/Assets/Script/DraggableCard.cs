@@ -98,6 +98,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         else
         {
             //사운드로 배치가 안된다는 정보전달
+            SoundManager.instance.PlaySound("Wrong");   // 코인부족해서 설치 못함
         }
     }
 }

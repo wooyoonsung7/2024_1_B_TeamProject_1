@@ -43,6 +43,7 @@ public class DraggableObject : MonoBehaviour
         {
             // 합체되지 않으면 원래 위치로 돌아가기
             transform.position = originalPosition;
+            SoundManager.instance.PlaySound("Wrong");       // 머지 실패
         }
     }
 

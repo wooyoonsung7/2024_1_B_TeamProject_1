@@ -112,6 +112,7 @@ public class EnemyController : MonoBehaviour
 
         if (EnemyHp <= 0)
         {
+            SoundManager.instance.PlaySound("EnemyDie");
             gameObject.SetActive(false);
             GameManager.Instance.getcoin = coinValue;
         }
