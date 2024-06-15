@@ -92,8 +92,11 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             SoundManager.instance.PlaySound("BuildTower");
             GameManager.Instance.BuyCard(CoinValue);
+
             GameObject gameObject = Instantiate(GameManager.Instance.TowerArray[cardIndex].columns[0]);
-            gameObject.transform.position = obj.transform.position;
+            Vector3 newPosition = obj.transform.position;
+            newPosition.y += 0.5f;
+            gameObject.transform.position = newPosition;
         }
         else
         {
