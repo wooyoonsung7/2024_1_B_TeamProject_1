@@ -129,4 +129,11 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
+  - name: BuildTower
+    clip: {fileID: 8300000, guid: 4cd863c6edd62474ea49ecf87c8b4590, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}

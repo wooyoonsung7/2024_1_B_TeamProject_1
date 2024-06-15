@@ -88,6 +88,7 @@ public class EnemyController : MonoBehaviour
 
         else if (other.tag == "EndPoint")       // Enemy가 끝까지 도착하면 HP를 깎음
         {
+            SoundManager.instance.PlaySound("Attacked");
             Health health = FindObjectOfType<Health>();
             if (health != null)
             {

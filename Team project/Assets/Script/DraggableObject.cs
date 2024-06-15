@@ -85,6 +85,7 @@ public class DraggableObject : MonoBehaviour
             GameObject newObject = Instantiate(GameManager.Instance.TowerArray[arrayIndex].columns[objectLevel + 1]
                 , otherObject.transform.position, Quaternion.identity);
 
+            SoundManager.instance.PlaySound("Merge");
             return true; // 합체가 성공했음을 알림
         }
         return false; // 합체가 실패했음을 알림

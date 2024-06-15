@@ -55,6 +55,7 @@ public class TowerController : MonoBehaviour
             {
                 if (AttackTimer >= AttackInterval)
                 {
+                    SoundManager.instance.PlaySound("Shoot");
                     GameObject bullet = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), transform.rotation);
                     bullet.GetComponent<Bullet>().speed = bulletSpeed;
                     bullet.GetComponent<Bullet>().attackValue = attackValue;

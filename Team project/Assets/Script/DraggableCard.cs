@@ -90,6 +90,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (GameManager.Instance.coin >= CoinValue)
         {
+            SoundManager.instance.PlaySound("BuildTower");
             GameManager.Instance.BuyCard(CoinValue);
             GameObject gameObject = Instantiate(GameManager.Instance.TowerArray[cardIndex].columns[0]);
             gameObject.transform.position = obj.transform.position;
