@@ -104,6 +104,8 @@ public class SettingsMenu1 : MonoBehaviour
     public void ReturnToMainMenu()
     {
         SoundManager.instance.PlaySound("Click");
+        SoundManager.instance.StopSound("GameBGM");
+        SoundManager.instance.StopSound("FeverBGM");
         // 메인 메뉴로 이동
         if (Time.timeScale != 1f)
         {
@@ -115,6 +117,8 @@ public class SettingsMenu1 : MonoBehaviour
     public void QuitGame()
     {
         SoundManager.instance.PlaySound("Click");
+        SoundManager.instance.StopSound("GameBGM");
+        SoundManager.instance.StopSound("FeverBGM");
         // 게임 종료
         Application.Quit();
     }

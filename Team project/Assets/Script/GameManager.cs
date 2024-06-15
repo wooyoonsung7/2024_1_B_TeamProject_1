@@ -68,6 +68,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        int i = SceneManager.GetActiveScene().buildIndex;
+        if (i==3)     // 피버 스테이지 (너무 야매로 했음...고민하면 효율적으로 할 수 있을 것 같은데 시간이 없음)
+        {
+            SoundManager.instance.PlaySound("FeverBGM");
+        }
+        else
+        {
+            SoundManager.instance.PlaySound("GameBGM");
+        }
         gamestate = GAMESTATE.GAMESTART;
         stateTimer = 1.0f;
         Time.timeScale = 1.0f;      // 게임 오버, 클리어 시 timeScale=0 된 것을 풀기 위해서 시작할 때 다시 timeScale을 1.0으로 초기화.
@@ -77,6 +86,7 @@ public class GameManager : MonoBehaviour
         coinTimer = 1.0f;  //코인시스템
         coin = 35;
         allcoin = 35;
+        PlayerPrefs.SetInt("ClearSound", 0);    // 클리어 사운드 오류때문에 넣은건데 다른 효율적인 방법이 있을 것 같음...그래도 일단 해둠
     }
 
      void Update()
@@ -231,11 +241,20 @@ public class GameManager : MonoBehaviour
 
     public void GoToSelection()
     {
+        SoundManager.instance.PlaySound("Click");
+        SoundManager.instance.StopSound("GameBGM");
+        SoundManager.instance.StopSound("FeverBGM");
         SceneManager.LoadScene("StageSelection");
+        SoundManager.instance.PlaySound("MainBGM");     // 셀렉션씬 스타트에서 해도 되는데 메인 -> 셀렉션 올 때 노래 끊기는거 거슬려서 여기서 호출함
     }
 
     public void GameClear()     
     {
+        if (PlayerPrefs.GetInt("ClearSound") == 0)
+        {
+            SoundManager.instance.PlaySound("Clear");
+            PlayerPrefs.SetInt("ClearSound", 1);
+        }
         PauseGame();
         UnlockNewStage();
         SaveStarCount();
@@ -247,6 +266,7 @@ public class GameManager : MonoBehaviour
 
     public void Gameover()
     {
+        SoundManager.instance.PlaySound("Over");
         isGameOver = true;
         Debug.Log("게임 오버");
         PauseGame();

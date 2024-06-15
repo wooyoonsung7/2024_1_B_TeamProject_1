@@ -7,12 +7,6 @@ public class TutorialUI : MonoBehaviour
 {
     //public GameObject[] Tutorials;  // SetActive 할 이미지 UI를 배열로 Inspector에서 받아옴    // 하위 오브젝트를 받아오는 코드가 있었음
     private GameObject tutorialCanvas;
-    /*private GameObject GameGoal;
-    private GameObject ClearOverCriteria;
-    private GameObject KeyDescription;
-    private GameObject UIDescription;
-    private GameObject PlayRules;
-    private GameObject CardStat;*/
 
     private void Awake()
     {
@@ -26,35 +20,8 @@ public class TutorialUI : MonoBehaviour
         }
         // tutorialCanvas.transform.GetChild(0).gameObject.SetActive(false);
 
-        PlayerPrefs.DeleteKey("TutorialDone");      // 테스트용. 항상 튜토리얼을 처음보는 상태로 만듦. 다 개발되면 삭제해야함
-
-        /*// 튜토리얼캔버스의 하위 자식들을 받아옴
-        GameGoal = tutorialCanvas.transform.GetChild(0).gameObject;
-        ClearOverCriteria = tutorialCanvas.transform.GetChild(1).gameObject;
-        KeyDescription = tutorialCanvas.transform.GetChild(2).gameObject;
-        UIDescription = tutorialCanvas.transform.GetChild(3).gameObject;
-        PlayRules = tutorialCanvas.transform.GetChild(4).gameObject;
-        CardStat = tutorialCanvas.transform.GetChild(5).gameObject;
-        
-        // 첫 번째 튜토리얼 이미지를 제외하고는 false로 초기 설정
-        GameGoal.SetActive(true);
-        ClearOverCriteria.SetActive(false);
-        KeyDescription.SetActive(false);
-        UIDescription.SetActive(false);
-        PlayRules.SetActive(false);
-        CardStat.SetActive(false);*/
+        // PlayerPrefs.DeleteKey("TutorialDone");      // 테스트용. 항상 튜토리얼을 처음보는 상태로 만듦. 다 개발되면 삭제해야함
     }
-
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        if (PlayerPrefs.GetInt("TutorialDone", 0) == 0)     // 튜토리얼을 봤는지 안 봤는지. 
-        {
-            // 튜토리얼을 보지 않았다면 아래 코드 실행
-            TutorialStart();
-            PlayerPrefs.SetInt("TutorialDone", 1);          // 투토리얼을 봤음
-        }
-    }*/
 
     private void Update()
     {

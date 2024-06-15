@@ -15,12 +15,12 @@ public class StageSelection : MonoBehaviour
     public Sprite emptyStarSprite;
     private const string StarCountKeyPrefs = "StarCount_";  // 수정할수도 있으니 상수 선언
 
-    /*private void Start()
+    private void Start()
     {
-        AddListener();
+        SoundManager.instance.PlaySound("MainBGM");
     }
 
-    public void AddListener()
+    /*public void AddListener()
     {
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -62,11 +62,14 @@ public class StageSelection : MonoBehaviour
 
     public void OnClickBack()
     {
+        SoundManager.instance.PlaySound("Click");
         SceneManager.LoadScene("MainScene");
     }
 
     public void LoadStage(int stageNum)
     {
+        SoundManager.instance.PlaySound("Click");
+        SoundManager.instance.StopSound("MainBGM");
         string stageName = "Stage " + stageNum;     // 씬 이름 바꾸면 바꿔줘야함
         SceneManager.LoadScene(stageName);
     }

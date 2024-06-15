@@ -39,6 +39,7 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         SoundManager.instance.PlaySound("Click");
+        SoundManager.instance.StopSound("MainBGM");
         Application.Quit();
     }
 }
