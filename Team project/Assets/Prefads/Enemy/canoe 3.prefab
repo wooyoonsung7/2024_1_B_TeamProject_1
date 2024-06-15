@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b617a31fdcac54048a9190b2fb9a78d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHp: 400
+  EnemyHp: 480
   speed: 3.5
   coinValue: 5
 --- !u!135 &8432140795405009071

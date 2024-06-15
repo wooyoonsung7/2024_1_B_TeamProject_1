@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 50456939}
   possibleColor: {r: 0, g: 0, b: 0, a: 0}
   impossibleColor: {r: 0, g: 0, b: 0, a: 0}
   cardIndex: 1
@@ -14458,7 +14458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 730986665}
   possibleColor: {r: 0, g: 0, b: 0, a: 0}
   impossibleColor: {r: 0, g: 0, b: 0, a: 0}
   cardIndex: 3
@@ -15679,7 +15679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 788355576}
   possibleColor: {r: 0, g: 0, b: 0, a: 0}
   impossibleColor: {r: 0, g: 0, b: 0, a: 0}
   cardIndex: 2
@@ -30174,7 +30174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 1637228310}
   possibleColor: {r: 0, g: 0, b: 0, a: 0}
   impossibleColor: {r: 0, g: 0, b: 0, a: 0}
   cardIndex: 0
