@@ -93,4 +93,13 @@ public class TutorialUI : MonoBehaviour
             Time.timeScale = 1.0f;
         }
     }
+
+    public void TutorialBeforeOnClick(int i)
+    {
+        if (0 <= i && i <= 11)
+        {
+            tutorialCanvas.transform.GetChild(i).gameObject.SetActive(false);       // 현재 이미지를 끄고
+            tutorialCanvas.transform.GetChild(i - 1).gameObject.SetActive(true);      // 다음 이미지를 켠다
+        }
+    }
 }
