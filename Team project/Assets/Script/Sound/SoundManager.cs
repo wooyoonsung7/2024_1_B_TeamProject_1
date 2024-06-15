@@ -69,4 +69,21 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning("사운드 : " + name + "없습니다.");
         }
     }
+
+    public void StopSound(string name)
+    {
+        Sound soundToStop = sounds.Find(sound => sound.name == name);
+
+        if (soundToStop != null)
+        {
+            if (soundToStop.source.isPlaying)
+            {
+                soundToStop.source.Stop();
+            }
+        }
+        else
+        {
+            Debug.LogWarning("사운드 : " + name + "없습니다.");
+        }
+    }
 }

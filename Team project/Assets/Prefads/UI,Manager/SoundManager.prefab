@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8016930338097629631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6776508751685840082}
+  - component: {fileID: 32219823982778114}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6776508751685840082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016930338097629631}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &32219823982778114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016930338097629631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f6ea9c1cd37684890f15145e81316f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MainBGM
+    clip: {fileID: 8300000, guid: 8675f3ad0a10cbd4da94c9c1c969a479, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    mixerGroup: {fileID: 1539787615243801555, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: GameBGM
+    clip: {fileID: 8300000, guid: 6c0de4c89248a4349bdea8e1a80db652, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    mixerGroup: {fileID: 1539787615243801555, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: FeverBGM
+    clip: {fileID: 8300000, guid: e642117b19a5bea4992e5e2bce4e0f24, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    mixerGroup: {fileID: 1539787615243801555, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: Clear
+    clip: {fileID: 8300000, guid: c76e7dc5d91533b4984a8307fb70c4e6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: Over
+    clip: {fileID: 8300000, guid: ef418b3756b532c4895a42b155756d8e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: Attacked
+    clip: {fileID: 8300000, guid: f9ad76b3c30145640862d2469b3c4e4e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 3cfeec7930c4cd740821482d3f9d9567, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: Merge
+    clip: {fileID: 8300000, guid: ae08c022b483ef14dbb43eb3fb1eae74, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: EnemySpawn
+    clip: {fileID: 8300000, guid: 303d773a0025d234dbcb535730719e07, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: EnemyDie
+    clip: {fileID: 8300000, guid: 1f0cf74654658b44398df4b7b259e3c2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 022f2b9f6d878994e98c710b6bebd4da, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  - name: Wrong
+    clip: {fileID: 8300000, guid: eed2df328fc103844a8211a2e7ff43af, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
+    source: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}

@@ -77,6 +77,7 @@ public class TutorialUI : MonoBehaviour
     // 버튼에 붙이는 함수
     public void TutorialNextOnClick(int i)
     {
+        SoundManager.instance.PlaySound("Click");
         if (0 <= i && i <= 10)
         {
             tutorialCanvas.transform.GetChild(i).gameObject.SetActive(false);       // 현재 이미지를 끄고
@@ -96,6 +97,7 @@ public class TutorialUI : MonoBehaviour
 
     public void TutorialBeforeOnClick(int i)
     {
+        SoundManager.instance.PlaySound("Click");
         if (0 <= i && i <= 11)
         {
             tutorialCanvas.transform.GetChild(i).gameObject.SetActive(false);       // 현재 이미지를 끄고

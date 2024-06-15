@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        SoundManager.instance.PlaySound("MainBGM");
+    }
+
     public void OnClickStart()
     {
+        SoundManager.instance.PlaySound("Click");
         if (PlayerPrefs.GetInt("IsFirstLaunch", 0) == 0)    // 처음실행일 때
         {
             // 처음이라면 Get받아올 키가 존재하지 않으므로 (선언이 안 됐으니까) 무조건 0이기 때문에 0==0으로 아래 코드가 실행됨
@@ -32,6 +38,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        SoundManager.instance.PlaySound("Click");
         Application.Quit();
     }
 }

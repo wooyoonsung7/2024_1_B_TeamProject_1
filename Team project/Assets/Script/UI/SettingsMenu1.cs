@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class SettingsMenu1 : MonoBehaviour
 {
     public GameObject settingsPanel;
-    public Button continueButton; // 게임 계속하기 버튼
+    /*public Button continueButton; // 게임 계속하기 버튼
     public Button restartButton;
     public Button mainMenuButton;
-    public Button quitButton;
+    public Button quitButton;*/
     public bool Paused = false;
     bool isquick = false;
 
@@ -26,7 +26,7 @@ public class SettingsMenu1 : MonoBehaviour
         if (Input.GetKey(KeyCode.F))
         {
             isquick = true;
-            Time.timeScale = 10f;
+            Time.timeScale = 10f;       // 빨리감기 속도
         }
         else
         {
@@ -36,21 +36,6 @@ public class SettingsMenu1 : MonoBehaviour
                 isquick = false;
             }
         }
-
-        if (Input.GetKey(KeyCode.F))
-        {
-            isquick = true;
-            Time.timeScale = 2f;
-        }
-        else
-        {
-            if (isquick == true)
-            {
-                Time.timeScale = 1f;
-                isquick = false;
-            }
-        }
-
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -70,14 +55,31 @@ public class SettingsMenu1 : MonoBehaviour
     public void OpenSettingsMenu()
     {
         settingsPanel.SetActive(true);
-        Time.timeScale = 0f; // 게임 일시 정지
+        if (Time.timeScale != 0f)
+        {
+            Time.timeScale = 0f; // 게임 시간 재개
+        }
         Paused = true;
     }
 
     public void CloseSettingsMenu()
     {
         settingsPanel.SetActive(false);
-        Time.timeScale = 1f; // 게임 재개
+        if (Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f; // 게임 시간 재개
+        }
+        Paused = false;
+    }
+
+    public void CloseSettingsMenuButton()       // 사운드 넣으려고 똑같은 기능이지만 걍 함수 2개로 나눔
+    {
+        SoundManager.instance.PlaySound("Click");
+        settingsPanel.SetActive(false);
+        if (Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f; // 게임 시간 재개
+        }
         Paused = false;
     }
 
@@ -90,20 +92,29 @@ public class SettingsMenu1 : MonoBehaviour
 
     public void RestartGame()
     {
+        SoundManager.instance.PlaySound("Click");
         // 현재 씬 다시 로드
-        Time.timeScale = 1f; // 게임 시간 재개
+        if (Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f; // 게임 시간 재개
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnToMainMenu()
     {
+        SoundManager.instance.PlaySound("Click");
         // 메인 메뉴로 이동
-        Time.timeScale = 1f; // 게임 시간 재개
+        if (Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f; // 게임 시간 재개
+        }
         SceneManager.LoadScene("MainScene");
     }
 
     public void QuitGame()
     {
+        SoundManager.instance.PlaySound("Click");
         // 게임 종료
         Application.Quit();
     }
