@@ -3,6 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+[System.Serializable]   // Serializable 직렬화 (클래스 데이터 형식을 인스펙터에서 보여주게 함)
+
+public class Sound
+{
+    public string name;
+    public AudioClip clip;
+
+    [Range(0f, 1f)]
+    public float volume = 1.0f;
+
+    [Range(0.1f, 3f)]
+    public float pitch = 1.0f;
+    public bool loop;
+    public AudioMixerGroup mixerGroup;
+
+    [HideInInspector]
+    public AudioSource source;
+}
+
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;

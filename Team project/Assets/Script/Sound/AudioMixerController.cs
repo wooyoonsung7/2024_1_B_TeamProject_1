@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 public class AudioMixerController : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private Slider musicMasterSlider;
+    /*[SerializeField] private Slider musicMasterSlider;*/
     [SerializeField] private Slider musicBGMSlider;
     [SerializeField] private Slider musicSFXSlider;
 
@@ -28,10 +28,10 @@ public class AudioMixerController : MonoBehaviour
 
 
 
-    public void SetMasterVolume(float volume)                       // 마스터 볼륨 슬라이더가 Mixer에 반영되게
+    /*public void SetMasterVolume(float volume)                       // 마스터 볼륨 슬라이더가 Mixer에 반영되게
     {
         audioMixer.SetFloat("Master", Mathf.Log10(volume) * 20);    // 볼륨은 Log10 단위에 20을 곱해준다
-    }
+    }*/
     public void SetBGMVolume(float volume)                          // BGM 볼륨 슬라이더가 Mixer에 반영되게
     {
         audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
