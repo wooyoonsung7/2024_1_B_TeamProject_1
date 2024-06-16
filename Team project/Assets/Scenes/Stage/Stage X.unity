@@ -11298,7 +11298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: WaveTimer
-      value: 60
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: SpawnTimer
@@ -23793,7 +23793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5845491360060915795, guid: bf06d102d9397134a91b8aa994e2a3d5, type: 3}
       propertyPath: m_Text
-      value: 1 - 3  Stage
+      value: X  Stage
       objectReference: {fileID: 0}
     - target: {fileID: 5937531029835801604, guid: bf06d102d9397134a91b8aa994e2a3d5, type: 3}
       propertyPath: m_Name
