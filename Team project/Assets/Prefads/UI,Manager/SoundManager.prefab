@@ -68,49 +68,49 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Clear
     clip: {fileID: 8300000, guid: 6b0bf07b0ea3f2c4aa6eb1a0792e0743, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
   - name: Over
     clip: {fileID: 8300000, guid: 073b73f8e29517845892f76df8f32022, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
   - name: Attacked
     clip: {fileID: 8300000, guid: f9ad76b3c30145640862d2469b3c4e4e, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
   - name: Shoot
     clip: {fileID: 8300000, guid: 3cfeec7930c4cd740821482d3f9d9567, type: 3}
-    volume: 1
+    volume: 0.372
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
   - name: Merge
     clip: {fileID: 8300000, guid: ae08c022b483ef14dbb43eb3fb1eae74, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
   - name: EnemySpawn
     clip: {fileID: 8300000, guid: 303d773a0025d234dbcb535730719e07, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}
   - name: EnemyDie
     clip: {fileID: 8300000, guid: 1f0cf74654658b44398df4b7b259e3c2, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
@@ -124,7 +124,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Wrong
     clip: {fileID: 8300000, guid: eed2df328fc103844a8211a2e7ff43af, type: 3}
-    volume: 1
+    volume: 0.901
     pitch: 1
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
@@ -132,7 +132,7 @@ MonoBehaviour:
   - name: BuildTower
     clip: {fileID: 8300000, guid: 4cd863c6edd62474ea49ecf87c8b4590, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 2.215
     loop: 0
     mixerGroup: {fileID: -6165796438987367724, guid: a3a26e335ad48994e9074d353c9e9b15, type: 2}
     source: {fileID: 0}

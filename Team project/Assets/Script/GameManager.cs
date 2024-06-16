@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.instance.StopSound("Over");
         int i = SceneManager.GetActiveScene().buildIndex;
-        if (i==3)     // 피버 스테이지 (너무 야매로 했음...고민하면 효율적으로 할 수 있을 것 같은데 시간이 없음)
+        if (i==3||i==6||i==9||i==13||i==16||i==19||i==23||i==26||i==29)     // 피버 스테이지 (너무 야매로 했음...고민하면 효율적으로 할 수 있을 것 같은데 시간이 없음)
         {
             SoundManager.instance.PlaySound("FeverBGM");
         }
