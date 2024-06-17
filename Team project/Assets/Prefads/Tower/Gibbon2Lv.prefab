@@ -90,7 +90,7 @@ MonoBehaviour:
   n_LayerMask:
     serializedVersion: 2
     m_Bits: 128
-  bulletSpeed: 30
+  bulletSpeed: 38
   attackValue: 20
   draggableObject: {fileID: 0}
   isBuild: 0

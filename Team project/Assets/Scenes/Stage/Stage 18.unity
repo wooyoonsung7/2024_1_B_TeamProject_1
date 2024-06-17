@@ -11915,6 +11915,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5444560577470827788, guid: 7e4ea33583aadb94d89dee3252dbd24a, type: 3}
   m_PrefabInstance: {fileID: 731595769}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &735917091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7904845096685447196, guid: 18a8b5b30cd27c14386fb6b3845b609d, type: 3}
+  m_PrefabInstance: {fileID: 1080424251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &738624190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18625,6 +18630,14 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 419239031}
+    - target: {fileID: 6883491076135825606, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
+      propertyPath: OverUI
+      value: 
+      objectReference: {fileID: 1567191630}
+    - target: {fileID: 6883491076135825606, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
+      propertyPath: ClearUI
+      value: 
+      objectReference: {fileID: 735917091}
     - target: {fileID: 7993249305861904954, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: hearts.Array.size
       value: 5
@@ -26203,6 +26216,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fb98f06cbe7214141bbca6a2fdef0e61, type: 3}
   m_PrefabInstance: {fileID: 1564640584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1567191630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5065963092379431930, guid: 18a8b5b30cd27c14386fb6b3845b609d, type: 3}
+  m_PrefabInstance: {fileID: 1080424251}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1571983288
 PrefabInstance:
