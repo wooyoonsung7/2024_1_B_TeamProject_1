@@ -11858,7 +11858,7 @@ MonoBehaviour:
   possibleColor: {r: 0, g: 0, b: 0, a: 0}
   impossibleColor: {r: 0, g: 0, b: 0, a: 0}
   cardIndex: 3
-  CoinValue: 65
+  CoinValue: 70
 --- !u!1 &9029286263209772387
 GameObject:
   m_ObjectHideFlags: 0
