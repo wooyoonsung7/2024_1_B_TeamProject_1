@@ -19175,7 +19175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: WaveTimer
-      value: 120
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: SpawnTimer
@@ -19191,7 +19191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: waveRound.Array.data[1].columns.Array.size
-      value: 45
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: waveRound.Array.data[1].columns.Array.data[1]
