@@ -19179,7 +19179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: WaveTimer
-      value: 120
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: SpawnTimer
