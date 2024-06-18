@@ -526,6 +526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1380,6 +1384,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2326,6 +2334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam stone2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e71c5ec89074ede4aa0505b12b45caef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2915,6 +2927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree3 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3393,6 +3409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree3 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3458,6 +3478,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e71c5ec89074ede4aa0505b12b45caef, type: 3}
       propertyPath: m_Name
       value: swam stone2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e71c5ec89074ede4aa0505b12b45caef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4494,6 +4518,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
       propertyPath: m_Name
       value: swam tree1 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5878,6 +5906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7da979654ed22a458456e22a12554b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6220,6 +6252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6418,6 +6454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree3 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6567,6 +6607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7da979654ed22a458456e22a12554b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6715,6 +6759,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
       propertyPath: m_Name
       value: swam tree1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7629,6 +7677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree4 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 975fd394377b3194f8f1937906a7852d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7694,6 +7746,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8107,6 +8163,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9352,6 +9412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9754,6 +9818,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
       propertyPath: m_Name
       value: swam tree1 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10554,6 +10622,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
       propertyPath: m_Name
       value: swam tree1 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12558,6 +12630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree4 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 975fd394377b3194f8f1937906a7852d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13420,6 +13496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13813,6 +13893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14072,6 +14156,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
       propertyPath: m_Name
       value: swam tree1 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15150,6 +15238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree3 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15342,6 +15434,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e12fb62a262c2c244a4189ad82cee38f, type: 3}
       propertyPath: m_Name
       value: swam grass1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e12fb62a262c2c244a4189ad82cee38f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15904,6 +16000,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16552,6 +16652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16761,6 +16865,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17826,6 +17934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam grass1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e12fb62a262c2c244a4189ad82cee38f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18617,6 +18729,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66d2b0b1f041c0c4f8e69c8ceecbb505, type: 3}
       propertyPath: m_Name
       value: swam stone1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66d2b0b1f041c0c4f8e69c8ceecbb505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19826,6 +19942,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21708,6 +21828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22248,6 +22372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam grass1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e12fb62a262c2c244a4189ad82cee38f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22569,6 +22697,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e71c5ec89074ede4aa0505b12b45caef, type: 3}
       propertyPath: m_Name
       value: swam stone2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e71c5ec89074ede4aa0505b12b45caef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23705,6 +23837,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66d2b0b1f041c0c4f8e69c8ceecbb505, type: 3}
       propertyPath: m_Name
       value: swam stone1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66d2b0b1f041c0c4f8e69c8ceecbb505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24846,6 +24982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25294,6 +25434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree1 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25359,6 +25503,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e12fb62a262c2c244a4189ad82cee38f, type: 3}
       propertyPath: m_Name
       value: swam grass1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e12fb62a262c2c244a4189ad82cee38f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26033,6 +26181,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27366,6 +27518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam stone1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66d2b0b1f041c0c4f8e69c8ceecbb505, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27431,6 +27587,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e71c5ec89074ede4aa0505b12b45caef, type: 3}
       propertyPath: m_Name
       value: swam stone2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e71c5ec89074ede4aa0505b12b45caef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28376,6 +28536,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29913,6 +30077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 975fd394377b3194f8f1937906a7852d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29978,6 +30146,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
       propertyPath: m_Name
       value: swam tree1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30341,6 +30513,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31216,6 +31392,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33312,6 +33492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree3 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33720,6 +33904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: swam tree3 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33984,6 +34172,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
       propertyPath: m_Name
       value: swam tree1 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c8c168418711f4285f5500c2b72031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34758,6 +34950,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
       propertyPath: m_Name
       value: swam tree3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 275c981471d70a540a36c6afc0f32e6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
