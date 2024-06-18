@@ -9292,10 +9292,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5467063559396435379, guid: d21d5cd6135487a489e912080fff3cb4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10945,10 +10941,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndPoint (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5315805530018363950, guid: 7e4ea33583aadb94d89dee3252dbd24a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5444560577470827788, guid: 7e4ea33583aadb94d89dee3252dbd24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.4
@@ -11378,7 +11370,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968909727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -12373,7 +12365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5845491360060915795, guid: bf06d102d9397134a91b8aa994e2a3d5, type: 3}
       propertyPath: m_Text
-      value: 1 - 5  Stage
+      value: 1 - 10  Stage
       objectReference: {fileID: 0}
     - target: {fileID: 5937531029835801604, guid: bf06d102d9397134a91b8aa994e2a3d5, type: 3}
       propertyPath: m_Name
