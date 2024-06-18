@@ -16,6 +16,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public UnityEngine.Color impossibleColor;
     public int cardIndex = 0;
     public int CoinValue = 0;  //코인값지정
+    private bool isOverTowerBase = false;
 
     private void Awake()
     {
@@ -40,24 +41,44 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             if (hit.collider.tag == "TowerBase")
             {
-                if (GameManager.Instance.coin < CoinValue)
+                isOverTowerBase = true;
+                /*if (GameManager.Instance.coin < CoinValue)
                 {
                     if (image.color == impossibleColor)
                         return;
                     image.color = impossibleColor;
                 }
-                else
+                else 
                 {
                     if (image.color == possibleColor)
                         return;
                     image.color = possibleColor;
-                }
+                }*/
             }
             else
             {
-                if (image.color == UnityEngine.Color.white)
-                    return;
-                image.color = UnityEngine.Color.white;
+                isOverTowerBase = false;
+                if (image.color != UnityEngine.Color.white)
+                    image.color = UnityEngine.Color.white;
+            }
+        }
+
+        
+    }
+
+    void Update()
+    {
+        if (isOverTowerBase == true)
+        {
+            if (GameManager.Instance.coin < CoinValue)
+            {
+                if (image.color != impossibleColor)
+                    image.color = impossibleColor;
+            }
+            else
+            {
+                if (image.color != possibleColor)
+                    image.color = possibleColor;
             }
         }
     }
@@ -69,6 +90,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         Affect3DObject();       
         rectTransform.anchoredPosition = originalPosition;
         image.color = UnityEngine.Color.white;
+        isOverTowerBase = false;
     }
 
     private void Affect3DObject()
