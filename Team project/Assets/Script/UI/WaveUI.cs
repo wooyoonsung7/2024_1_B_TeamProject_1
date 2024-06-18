@@ -20,6 +20,7 @@ public class WaveUI : MonoBehaviour
         stageWaveData = FindObjectOfType<StageWaveData>();
         //StageWaveData stageWaveData = FindObjectOfType<StageWaveData>();
         stageWave = stageWaveData.waveRound.Length;     // 총 웨이브 수 할당
+        //nextWaveTimer.text = "1 웨이브 진행 중";
     }
 
     // Update is called once per frame
@@ -42,7 +43,11 @@ public class WaveUI : MonoBehaviour
         {
             nextWaveTimer.text = stateTimer.ToString("0.0") + " 초 남음";
         }
-        else if(stateTimer <= 1.0f)
+        else if (0.0 < stateTimer && stateTimer < 1.0f)
+        {
+            nextWaveTimer.text = "준비 중";
+        }
+        else if(stateTimer <= 0.0f)
         {
             nextWaveTimer.text = currentWave + " 웨이브 진행 중";
         }
