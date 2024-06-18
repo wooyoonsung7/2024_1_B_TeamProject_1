@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 5256016337656090639}
   possibleColor: {r: 0.42745098, g: 1, b: 0.5803922, a: 1}
   impossibleColor: {r: 1, g: 0.46666667, b: 0.46666667, a: 1}
   cardIndex: 4
@@ -11935,7 +11935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f958e3e6daf31b4d8cef50314b1b1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 4978354930461334335}
   possibleColor: {r: 0.42745098, g: 1, b: 0.5803922, a: 1}
   impossibleColor: {r: 1, g: 0.46666667, b: 0.46666667, a: 1}
   cardIndex: 3
