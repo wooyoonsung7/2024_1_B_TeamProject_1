@@ -60,6 +60,52 @@ public class StageSelection : MonoBehaviour
         }
     }
 
+    private void Update()                                   // 치트 코드
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha0))               // 0번을 누르면 모든 스테이지 해금
+        {
+            PlayerPrefs.SetInt("UnlockedStage", 30);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))              // 탭키를 누르면 게임 초기화
+        {
+            PlayerPrefs.SetInt("UnlockedStage", 1);     // 해금된 스테이지 초기화 (1스테이지부터)
+            PlayerPrefs.SetInt("TutorialDone", 0);      // 튜토리얼 미완료로 초기화
+
+            for (int i = 0; i < 30; i++)
+            {
+                PlayerPrefs.SetInt("StarCount_" + (i + 1), 0);     // 스테이지마다 별 개수 초기화 (모두 0으로)
+            }
+
+            PlayerPrefs.SetInt("IsFirstLaunch", 1);     // 처음 실행되었음을 표시 (이 함수를 호출할때 최초실행 구분을 위해)
+
+            PlayerPrefs.Save();
+        }
+
+        int unlockedStage = PlayerPrefs.GetInt("UnlockedStage", 1);     // 해금된 스테이지 수를 불러온다 (없다면 1을 반환(처음에 1스테이지는 해금되어 있어야 하니까))
+        for (int i = 0; i < buttons.Length; i++)    // 버튼 개수 만큼 반복
+        {
+            buttons[i].button.interactable = false;    // 일단 버튼을 다 비활성화 시키고
+        }
+        for (int i = 0; i < unlockedStage; i++)     // 해금된 버튼 까지만 반복
+        {
+            buttons[i].button.interactable = true;     // 버튼 상호작용 활성화
+
+            int stageIndex = i + 1;     // 스테이지 번호
+            // starCount에 StarCountKeyPrefs + stageIndex 키. 즉, StarCount_stageIndex 라는 키 값을 받아옴
+            int starCount = PlayerPrefs.GetInt(StarCountKeyPrefs + stageIndex, 0);  // 키가 없으면 0 반환
+
+            for (int k = 0; k < 3; k++)     // 별 3개를 빈 상태로 초기화
+            {
+                buttons[i].stars[k].sprite = emptyStarSprite;
+            }
+            for (int k = 0; k < starCount; k++)     // 받은 별 개수만큼 반복
+            {
+                buttons[i].stars[k].sprite = fillStarSprite;    // 각 버튼에 해당하는 스테이지에서 받은 별의 개수만큼 Fill별로 변경
+            }
+        }
+    }
+
     public void OnClickBack()
     {
         SoundManager.instance.PlaySound("Click");

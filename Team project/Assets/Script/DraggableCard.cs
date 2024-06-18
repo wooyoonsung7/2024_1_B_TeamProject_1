@@ -32,7 +32,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        /*Vector2 screenPosition = rectTransform.position;              // 일단 비활성화 해둠 (Null 오류떠서.. 나중에 카드 리소스 적용할 때 켜고 색깔 지정해줘야함)
+        Vector2 screenPosition = rectTransform.position;              // 일단 비활성화 해둠 (Null 오류떠서.. 나중에 카드 리소스 적용할 때 켜고 색깔 지정해줘야함)
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
         RaycastHit hit;
 
@@ -59,7 +59,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                     return;
                 image.color = UnityEngine.Color.white;
             }
-        }*/
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -68,6 +68,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         // 드래그 종료 시 3D 객체에 영향을 주는 로직 호출        
         Affect3DObject();       
         rectTransform.anchoredPosition = originalPosition;
+        image.color = UnityEngine.Color.white;
     }
 
     private void Affect3DObject()
