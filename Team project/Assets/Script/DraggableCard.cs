@@ -1,5 +1,5 @@
 using DG.Tweening.Core.Easing;
-using Microsoft.Unity.VisualStudio.Editor;
+//using Microsoft.Unity.VisualStudio.Editor;
 using System.Drawing;
 using UnityEngine;
 using UnityEngine.UI;

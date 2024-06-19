@@ -25,6 +25,6 @@ public class GizmoLabel : MonoBehaviour
         style.fontStyle = FontStyle.Bold;
 
         Vector3 position = transform.position + Vector3.up * 2;
-        UnityEditor.Handles.Label(position, label, style);
+        //UnityEditor.Handles.Label(position, label, style);
     }
 }
