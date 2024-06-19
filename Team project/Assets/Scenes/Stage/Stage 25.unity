@@ -2922,7 +2922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2744094737273449178, guid: 957aeafe52d306d4487f677fe8baff82, type: 3}
       propertyPath: m_Text
-      value: 3 - 4  Stage
+      value: 3 - 5  Stage
       objectReference: {fileID: 0}
     - target: {fileID: 5057138478558699647, guid: 957aeafe52d306d4487f677fe8baff82, type: 3}
       propertyPath: m_Pivot.x
