@@ -37027,10 +37027,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartPoint
       objectReference: {fileID: 0}
-    - target: {fileID: 2684134611396008811, guid: d21d5cd6135487a489e912080fff3cb4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4131785410516256879, guid: d21d5cd6135487a489e912080fff3cb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.03
@@ -37069,10 +37065,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4131785410516256879, guid: d21d5cd6135487a489e912080fff3cb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467063559396435379, guid: d21d5cd6135487a489e912080fff3cb4, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -37368,14 +37360,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndPoint
       objectReference: {fileID: 0}
-    - target: {fileID: 3599437111449646254, guid: 7e4ea33583aadb94d89dee3252dbd24a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5315805530018363950, guid: 7e4ea33583aadb94d89dee3252dbd24a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5444560577470827788, guid: 7e4ea33583aadb94d89dee3252dbd24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.6
@@ -37484,11 +37468,11 @@ PrefabInstance:
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: waveRound.Array.data[0].columns.Array.data[1]
       value: 
-      objectReference: {fileID: 5400057671791015840, guid: 87e47b18b240b1842b2731714a274cfe, type: 3}
+      objectReference: {fileID: 3188430289247217643, guid: 84bbcba624982ec44b842d991ca6d575, type: 3}
     - target: {fileID: 4937403028568711474, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: waveRound.Array.data[0].columns.Array.data[2]
       value: 
-      objectReference: {fileID: 7919579366895537295, guid: fed52a3d10f94d947a00c2fe179db38d, type: 3}
+      objectReference: {fileID: 3188430289247217643, guid: 84bbcba624982ec44b842d991ca6d575, type: 3}
     - target: {fileID: 6587785976871314332, guid: 036e2f94b87143146abe20999aeb7a37, type: 3}
       propertyPath: m_Name
       value: GameManager

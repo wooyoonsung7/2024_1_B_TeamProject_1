@@ -29838,7 +29838,7 @@ PrefabInstance:
       objectReference: {fileID: 667567182}
     - target: {fileID: 8635082015825271463, guid: 18a8b5b30cd27c14386fb6b3845b609d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GameClear
+      value: GoToSelection
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
