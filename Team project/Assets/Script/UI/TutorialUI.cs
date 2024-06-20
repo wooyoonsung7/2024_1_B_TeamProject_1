@@ -45,7 +45,7 @@ public class TutorialUI : MonoBehaviour
     public void TutorialNextOnClick(int i)
     {
         SoundManager.instance.PlaySound("Click");
-        if (0 <= i && i <= 10)
+        if (0 <= i && i <= 11)
         {
             tutorialCanvas.transform.GetChild(i).gameObject.SetActive(false);       // 현재 이미지를 끄고
             tutorialCanvas.transform.GetChild(i + 1).gameObject.SetActive(true);      // 다음 이미지를 켠다
@@ -55,9 +55,9 @@ public class TutorialUI : MonoBehaviour
             //Debug.Log("존재하지 않음");
         }
 
-        if (i == 11)     // 마지막 이미지 버튼일 때 작동
+        if (i == 12)     // 마지막 이미지 버튼일 때 작동
         {
-            tutorialCanvas.transform.GetChild(11).gameObject.SetActive(false);        // 마지막 이미지 끄기
+            tutorialCanvas.transform.GetChild(12).gameObject.SetActive(false);        // 마지막 이미지 끄기
             Time.timeScale = 1.0f;
         }
     }
@@ -65,10 +65,17 @@ public class TutorialUI : MonoBehaviour
     public void TutorialBeforeOnClick(int i)
     {
         SoundManager.instance.PlaySound("Click");
-        if (0 <= i && i <= 11)
+        if (0 <= i && i <= 12)
         {
             tutorialCanvas.transform.GetChild(i).gameObject.SetActive(false);       // 현재 이미지를 끄고
             tutorialCanvas.transform.GetChild(i - 1).gameObject.SetActive(true);      // 다음 이미지를 켠다
         }
+    }
+
+    public void TutorialGoToRecap()
+    {
+        SoundManager.instance.PlaySound("Click");
+        tutorialCanvas.transform.GetChild(0).gameObject.SetActive(false);        // 첫 번째 이미지 끄기
+        tutorialCanvas.transform.GetChild(11).gameObject.SetActive(true);       // 요약으로 바로 가기
     }
 }
