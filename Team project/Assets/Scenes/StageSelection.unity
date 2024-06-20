@@ -1496,7 +1496,6 @@ MonoBehaviour:
   - {fileID: 213751869}
   - {fileID: 1956528874}
   - {fileID: 1962464108}
-  - {fileID: 0}
   fillStarSprite: {fileID: 21300000, guid: 4cc8ee1fb2bf423409847a854632c90a, type: 3}
   emptyStarSprite: {fileID: 21300000, guid: a25936d8dc794054cb01fb04aa7e1c14, type: 3}
 --- !u!1 &168837773
