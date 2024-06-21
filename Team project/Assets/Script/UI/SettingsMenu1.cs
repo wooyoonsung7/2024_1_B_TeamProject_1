@@ -26,7 +26,7 @@ public class SettingsMenu1 : MonoBehaviour
         if (Input.GetKey(KeyCode.F))
         {
             isquick = true;
-            Time.timeScale = 10f;       // 빨리감기 속도
+            Time.timeScale = 5f;       // 빨리감기 속도
         }
         else
         {

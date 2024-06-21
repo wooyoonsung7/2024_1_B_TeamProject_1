@@ -62,7 +62,7 @@ public class StageSelection : MonoBehaviour
 
     private void Update()                                   // 치트 코드
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))               // 0번을 누르면 모든 스테이지 해금
+        /*if (Input.GetKeyDown(KeyCode.Alpha0))               // 0번을 누르면 모든 스테이지 해금
         {
             PlayerPrefs.SetInt("UnlockedStage", 31);
         }
@@ -80,7 +80,7 @@ public class StageSelection : MonoBehaviour
             PlayerPrefs.SetInt("IsFirstLaunch", 1);     // 처음 실행되었음을 표시 (이 함수를 호출할때 최초실행 구분을 위해)
 
             PlayerPrefs.Save();
-        }
+        }*/
 
         int unlockedStage = PlayerPrefs.GetInt("UnlockedStage", 1);     // 해금된 스테이지 수를 불러온다 (없다면 1을 반환(처음에 1스테이지는 해금되어 있어야 하니까))
         for (int i = 0; i < buttons.Length; i++)    // 버튼 개수 만큼 반복
