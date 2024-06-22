@@ -230,7 +230,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("UnlockedStage", 1);     // 해금된 스테이지 초기화 (1스테이지부터)
         PlayerPrefs.SetInt("TutorialDone", 0);      // 튜토리얼 미완료로 초기화
 
-        for (int i=0; i < 30; i++)
+        for (int i=0; i < 31; i++)
         {
             PlayerPrefs.SetInt(StarCountKeyPrefs + (i + 1), 0);     // 스테이지마다 별 개수 초기화 (모두 0으로)
         }
